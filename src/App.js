@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from "react"
 import './App.css';
+import Slideshow from './Components/Slideshow';
+import { } from './firebase/config'
+import MenuBar from "./Components/MenuBar"
+import GridImages from "./Components/GridImages"
+
+
 
 function App() {
+  //hooks
+  const [slideImage, setSlideImage] = useState([])
+
+  //functions
+
+  //JSX
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MenuBar />
+      <div>
+        <Slideshow slideImage={slideImage} setSlideImage={setSlideImage} />
+        <GridImages />
+      </div>
     </div>
   );
+
 }
 
 export default App;
+
