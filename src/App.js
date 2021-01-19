@@ -8,8 +8,6 @@ import GridImages from "./Components/GridImages"
 
 
 function App() {
-  //hooks
-  const [slideImage, setSlideImage] = useState([])
 
   //functions
 
@@ -18,7 +16,7 @@ function App() {
     <div>
       <MenuBar />
       <div>
-        <Slideshow slideImage={slideImage} setSlideImage={setSlideImage} />
+        <Slideshow />
         <GridImages />
       </div>
     </div>
