@@ -14,7 +14,7 @@ function App() {
 
   //JSX
   return (
-      <div>
+      <div className="App">
         <MenuBar />
         <div>
           <Slideshow />

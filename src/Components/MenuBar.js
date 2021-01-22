@@ -21,10 +21,10 @@ const MenuBar = () => {
     };
 
     return (
-        <div className="App">
+        <div className="menuApp">
             <Router>
                 <header className="menu">
-                    <h1 className="headings"><Link to="/">MasaFuna <br />Photos</Link></h1>
+                    <h1 className="title"><Link to="/">MasaFuna <br />Photos</Link></h1>
 
                     <ul className="menu-items">
                         <li>
