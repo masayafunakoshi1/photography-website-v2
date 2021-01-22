@@ -3,8 +3,9 @@ import './App.css';
 import Slideshow from './Components/Slideshow';
 import { } from './firebase/config'
 import MenuBar from "./Components/MenuBar"
-import GridImages from "./Components/GridImages"
-
+import GridImagesWeddings from "./Components/gridImages/GridImagesWeddings"
+import GridImagesEvents from "./Components/gridImages/GridImagesEvents"
+import GridImagesPersonal from "./Components/gridImages/GridImagesPersonal"
 
 
 function App() {
@@ -13,13 +14,15 @@ function App() {
 
   //JSX
   return (
-    <div>
-      <MenuBar />
       <div>
-        <Slideshow />
-        <GridImages />
+        <MenuBar />
+        <div>
+          <Slideshow />
+          <GridImagesWeddings />
+          <GridImagesEvents />
+          <GridImagesPersonal />
+        </div>
       </div>
-    </div>
   );
 
 }

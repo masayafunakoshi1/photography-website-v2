@@ -3,12 +3,11 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import {
     BrowserRouter as Router,
-    Switch,
     Link,
     Route,
 } from "react-router-dom";
 import Contact from './Contact'
-import App from '../App'
+
 
 const MenuBar = () => {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -25,7 +24,7 @@ const MenuBar = () => {
         <div className="App">
             <Router>
                 <header className="menu">
-                    <h1 className="headings"><Link to="/App">MasaFuna <br />Photos</Link></h1>
+                    <h1 className="headings"><Link to="/">MasaFuna <br />Photos</Link></h1>
 
                     <ul className="menu-items">
                         <li>
@@ -54,14 +53,9 @@ const MenuBar = () => {
                     </ul>
                 </header>
 
-                <Switch>
-                    <Route path="/Contact">
-                        <Contact />
-                    </Route>
-                    <Route path="/App">
-                        <App />
-                    </Route>
-                </Switch>
+            
+                <Route path="/Contact" component={Contact}></Route>
+
             </Router>
         </div >
     )
