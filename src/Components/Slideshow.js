@@ -32,7 +32,7 @@ const Slideshow = () => {
         } else if (slideIndex < 0) {
             slideIndex = 7
         };
-        showSlides();
+        await showSlides();
         // await clearInterval();
         // await setInterval(autoSlideshowImageChanger, 5000);
     }
@@ -52,28 +52,8 @@ const Slideshow = () => {
     // };
 
 
-
-
-    /////////////Automatic Slideshow/////////////////////
-    // const slideshowImageChanger = () => {
-    //     for (let i = 0; i <= docs.length; i++) {
-    //         firebaseImages(docs[i].url);
-
-    //         if (i === 8) {
-    //             i = 0;
-    //         } else (console.log("Slideshow Reset Error..."))
-    //     }
-    // }
-
-    // setTimeout(() => {
-    //     if (docs.length === 8) {
-    //         slideshowImageChanger();
-    //     } else { console.log("Slideshow Function Error...") };
-    // }, 4000)
-
-
     return (
-        <div>
+        <div className="slideshowSegment">
             <Container maxWidth="sm" className="slideshow">
                 <Fab onClick={() => { slideshowImageChanger(1) }} className="rightArrow"><span>&#10095;</span></Fab>
                 <img id="myimg" />
