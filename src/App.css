@@ -4,9 +4,19 @@
   box-sizing: border-box;
 }
 
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&display=swap");
+
 /* overall page*/
 
 .App {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+.menuApp {
   display: flex;
   flex-wrap: wrap;
 
@@ -30,13 +40,17 @@
 
 h1 {
   font-weight: bold;
-  color: #808080;
-  font-size: 3.5em;
-  font-family: "Aguafina Script";
+  font-family: "Pinyon Script", cursive;
 
-  padding-left: 70px;
+  padding-left: 40px;
   padding-top: 20px;
   line-height: 1.3em;
+}
+
+.title {
+  color: #808080;
+  font-size: 4.5em;
+  line-height: 70px;
 }
 
 .menu-items > li {
@@ -58,23 +72,53 @@ a:hover {
 
 /* Page Segmentation */
 .slideshowSegment {
-  height: 900px;
+  height: 1100px;
 }
 
 .firstSegment {
+  width: 100%;
+  padding-left: 32px;
+
+  background: #f7b8c1; /* fallback for old browsers */
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 189, 198) 80%,
+    rgba(255, 255, 255) 100%
+  );
 }
 
 .secondSegment {
   margin-top: 150px;
+  width: 100%;
+  padding-left: 32px;
+
+  background: #f7b8c1; /* fallback for old browsers */
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 189, 198) 80%,
+    rgb(255, 255, 255) 100%
+  );
 }
 
 .thirdSegment {
   margin-top: 150px;
+  width: 100%;
+  padding-left: 32px;
+
+  background: #f7b8c1; /* fallback for old browsers */
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 189, 198) 80%,
+    rgba(255, 255, 255) 100%
+  );
 }
 
 /*Slideshow*/
 #myimg {
-  max-width: 1050px;
+  max-width: 1300px;
   height: auto;
   flex: 100%;
   z-index: 1;
@@ -82,20 +126,20 @@ a:hover {
 }
 
 .slideshow {
-  min-width: 1100px;
+  min-width: 1350px;
   height: auto;
   z-index: 1;
 
   border: solid 1px red;
   position: relative;
-  left: 300px;
+  left: 200px;
 }
 
 .rightArrow {
   text-align: center;
   position: relative;
-  left: 1055px;
-  top: 380px;
+  left: 1305px;
+  top: 490px;
   font-size: 30pt;
 }
 
@@ -107,7 +151,7 @@ a:hover {
 .leftArrow {
   text-align: center;
   position: relative;
-  bottom: 380px;
+  bottom: 430px;
   right: 60px;
 }
 
@@ -119,24 +163,56 @@ a:hover {
 .quote {
   text-align: center;
   color: #bbb;
-  font-size: 45pt;
+  font-size: 60pt;
   font-family: "Times New Roman", Times, serif;
   z-index: 3;
 
   position: relative;
-  bottom: 720px;
-  right: 400px;
+  bottom: 840px;
+  right: 300px;
 }
 
 .quote > span {
-  font-size: 70pt;
+  font-size: 90pt;
   font-style: italic;
   color: #d1949a;
 }
 
 /* Grid Images */
-.gridImage {
-  align-content: center;
+.sectionTitles {
+  background-color: pink;
+  background-image: linear-gradient(to top, #f8dfdf, #f77588);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+  font-size: 3.5em;
+}
+
+.gridImage:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+
+  cursor: pointer;
+}
+
+/* Fade in Grid Items */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
 
 /* For mobile phones */

@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import Fab from '@material-ui/core/Fab';
 import { projectFirestore } from '../firebase/config'
 import useFirestore from '../hooks/useFirestore'
+import FadeInSections from './FadeInSections';
 
 
 const Slideshow = () => {
@@ -54,16 +55,15 @@ const Slideshow = () => {
 
     return (
         <div className="slideshowSegment">
-            <Container maxWidth="sm" className="slideshow">
+            <Container maxWidth="md" className="slideshow">
                 <Fab onClick={() => { slideshowImageChanger(1) }} className="rightArrow"><span>&#10095;</span></Fab>
                 <img id="myimg" />
                 <Fab onClick={() => { slideshowImageChanger(-1) }} className="leftArrow"><span>&#10094;</span></Fab>
             </Container>
 
-            <Container className="quote">
-                <span>Photography</span> is a medium <br /> which allows you to experience life <br /> from another's perspective...
-            </Container>
-
+                <Container className="quote">
+                    <span>Photography</span> is a medium <br /> which allows you to experience life <br /> from another's perspective...
+                </Container>
         </div>
     )
 }
