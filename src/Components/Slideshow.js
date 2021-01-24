@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'
 import Container from '@material-ui/core/Container';
+import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
-import { projectFirestore } from '../firebase/config'
 import useFirestore from '../hooks/useFirestore'
-import FadeInSections from './FadeInSections';
-
 
 const Slideshow = () => {
 
@@ -52,10 +50,27 @@ const Slideshow = () => {
     //     clearInterval(auto)
     // };
 
+    const useStyles = makeStyles((theme) => ({
+        container: {
+        width: 1000,
+        alignItems: "center",
+        justifyContent: "center",
+        },
+        [theme.breakpoints.up('md')]: {
+            width: 700,
+            height: 500,
+        },
+        [theme.breakpoints.up('xs')]:{
+            
+        } 
+    }
+));
+
+    const classes = useStyles();
 
     return (
         <div className="slideshowSegment">
-            <Container maxWidth="md" className="slideshow">
+            <Container className="slideshow" className={classes.container}>
                 <Fab onClick={() => { slideshowImageChanger(1) }} className="rightArrow"><span>&#10095;</span></Fab>
                 <img id="myimg" />
                 <Fab onClick={() => { slideshowImageChanger(-1) }} className="leftArrow"><span>&#10094;</span></Fab>
