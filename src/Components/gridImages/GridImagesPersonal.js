@@ -26,8 +26,17 @@ const GridImagesPersonal = () => {
         justifyContent: "center",
         width: 600,
         height: 400,
+            [theme.breakpoints.up('xl')]: {
+            width: 480,
+            height: 280,
+            },
+            [theme.breakpoints.up('md')]: {
+            width: 980,
+            height: 780,
+            },
         },
-    }));
+    }
+));
 
     const classes = useStyles();
 
@@ -36,15 +45,15 @@ const GridImagesPersonal = () => {
             <h1 className="sectionTitles">Personal Projects</h1>
 
             <div className={classes.root}>
-                <FadeInSections>
+            <FadeInSections>
                     <Grid container justify="center" spacing={2}>
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item md={12} lg={6} xl={4} className="gridImage">
                             <img src={showImage(0)} className="gridImage" className={classes.img}></img>
                         </Grid>
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item md={12} lg={6} xl={4}>
                             <img src={showImage(1)} className="gridImage" className={classes.img}></img>
                         </Grid>
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item md={12} lg={6} xl={4}>
                             <img src={showImage(2)} className="gridImage" className={classes.img}></img>
                         </Grid>
                     </Grid>
@@ -52,13 +61,13 @@ const GridImagesPersonal = () => {
 
                 <FadeInSections>
                     <Grid container justify="center" spacing={2}>
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item md={12} lg={6} xl={4}>
                             <img src={showImage(3)} className="gridImage" className={classes.img}></img>
                         </Grid>
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item md={12} lg={6} xl={4}>
                             <img src={showImage(4)} className="gridImage" className={classes.img}></img>
                         </Grid>
-                        <Grid item xs={12} sm={6} md={4}>
+                        <Grid item md={12} lg={6} xl={4}>
                             <img src={showImage(5)} className="gridImage" className={classes.img}></img>
                         </Grid>
                     </Grid>
