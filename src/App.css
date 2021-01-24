@@ -125,6 +125,8 @@ a:hover {
   border-radius: 5%;
 }
 
+/* In Slideshow.JS */
+/* 
 .slideshow {
   min-width: 1350px;
   height: auto;
@@ -133,7 +135,7 @@ a:hover {
   border: solid 1px red;
   position: relative;
   left: 200px;
-}
+} */
 
 .rightArrow {
   text-align: center;
@@ -163,7 +165,7 @@ a:hover {
 .quote {
   text-align: center;
   color: #bbb;
-  font-size: 60pt;
+  font-size: 45pt;
   font-family: "Times New Roman", Times, serif;
   z-index: 3;
 
@@ -173,7 +175,7 @@ a:hover {
 }
 
 .quote > span {
-  font-size: 90pt;
+  font-size: 75pt;
   font-style: italic;
   color: #d1949a;
 }
@@ -215,8 +217,252 @@ a:hover {
   visibility: visible;
 }
 
+
+/*////////////////////////////////////// Different Screen Sizes ////////////////////////////////////////////*/
+
+/* Laptops */
+@media only screen and (max-width: 1920px){
+
+  /* top menu bar*/
+  .menu {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #f7b8c1; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
+    background: linear-gradient(to top, #ffffff, #f7b8c1);
+  }
+
+  /*SlideShow*/
+  #myimg {
+    max-width: 950px;
+    height: auto;
+    flex: 100%;
+    z-index: 1;
+    border-radius: 5%;
+  }
+  
+  .rightArrow {
+    text-align: center;
+    position: relative;
+    left: 960px;
+    top: 348px;
+    font-size: 30pt;
+  }
+  
+  .leftArrow {
+    text-align: center;
+    position: relative;
+    bottom: 350px;
+    right: 67px;
+  }
+  
+  .quote {
+    text-align: center;
+    color: #bbb;
+    font-size: 40pt;
+    font-family: "Times New Roman", Times, serif;
+    z-index: 3;
+
+    position: relative;
+    bottom: 660px;
+    right: 350px;
+  }
+
+  .quote > span {
+    font-size: 60pt;
+    font-style: italic;
+    color: #d1949a;
+  }
+
+  /* Grid Images */
+  .sectionTitles {
+    background-color: pink;
+    background-image: linear-gradient(to top, #f8dfdf, #f77588);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+    font-size: 3.5em;
+  }
+
+    /* Page Segmentation */
+  .slideshowSegment {
+    height: 800px;
+  }
+
+  .firstSegment {
+    width: 100%;
+    right: 20px;
+  
+    background: #f7b8c1; /* fallback for old browsers */
+    background: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 0%,
+      rgb(255, 189, 198) 80%,
+      rgba(255, 255, 255) 100%
+    );
+  }
+  
+  .secondSegment {
+    margin-top: 100px;
+    width: 100%;
+  
+    background: #f7b8c1; /* fallback for old browsers */
+    background: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 0%,
+      rgb(255, 189, 198) 80%,
+      rgb(255, 255, 255) 100%
+    );
+  }
+  
+  .thirdSegment {
+    margin-top: 100px;
+    width: 100%;
+  
+    background: #f7b8c1; /* fallback for old browsers */
+    background: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 0%,
+      rgb(255, 189, 198) 80%,
+      rgba(255, 255, 255) 100%
+    );
+  }
+
+}
+
+
+
+/*///////////////////////////////////////////////////////// Tablets //////////////////////////////////////////////////////////*/
+@media only Screen and (max-width: 1280px){
+  /* top menu bar*/
+  .menu {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #f7b8c1; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
+    background: linear-gradient(to top, #ffffff, #f7b8c1);
+  }
+
+  /*SlideShow*/
+  #myimg {
+    max-width: 800px;
+    height: auto;
+    flex: 100%;
+    z-index: 1;
+    border-radius: 5%;
+  }
+  
+  
+  .rightArrow {
+    text-align: center;
+    position: relative;
+    left: 880px;
+    top: -250px;
+    font-size: 30pt;
+  }
+  
+  .leftArrow {
+    text-align: center;
+    position: relative;
+    bottom: 250px;
+    right: 880px;
+  }
+  
+  .quote {
+    text-align: center;
+    color: #bbb;
+    font-size: 20pt;
+    font-family: "Times New Roman", Times, serif;
+    z-index: 3;
+
+    position: relative;
+    bottom: 200px;
+    right: 100px;
+  }
+
+  .quote > span {
+    font-size: 40pt;
+    font-style: italic;
+    color: #d1949a;
+  }
+
+  /* Grid Images */
+  .sectionTitles {
+    background-color: pink;
+    background-image: linear-gradient(to top, #f8dfdf, #f77588);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+    font-size: 8em;
+    text-align: center;
+  }
+
+    /* Page Segmentation */
+  .slideshowSegment {
+    height: 700px;
+  }
+
+  .firstSegment {
+    width: 100%;
+  
+    background: #f7b8c1; /* fallback for old browsers */
+    background: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 0%,
+      rgb(255, 189, 198) 80%,
+      rgba(255, 255, 255) 100%
+    );
+  }
+  
+  .secondSegment {
+    margin-top: 150px;
+    width: 100%;
+  
+    background: #f7b8c1; /* fallback for old browsers */
+    background: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 0%,
+      rgb(255, 189, 198) 80%,
+      rgb(255, 255, 255) 100%
+    );
+  }
+  
+  .thirdSegment {
+    margin-top: 150px;
+    width: 100%;
+  
+    background: #f7b8c1; /* fallback for old browsers */
+    background: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 0%,
+      rgb(255, 189, 198) 80%,
+      rgba(255, 255, 255) 100%
+    );
+  }
+  
+}
+
+
 /* For mobile phones */
-@media only screen and (max-width: 620px) {
+@media all and (max-device-width: 480px) {
   .menu {
     width: 100%;
   }
