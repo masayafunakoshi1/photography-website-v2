@@ -24,14 +24,33 @@
 }
 
 /* top menu bar*/
+
+/* Top menu bar shrink or grow*/
+
+/* Attempting to make it become smaller as you scroll down from top */
+.menu.active {
+  width: 100%;
+  height: 80px;
+  top: 0;
+  transition: 0.4s;
+
+  position: fixed;
+  overflow: hidden;
+  z-index: 1000;
+  background: #f7b8c1; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
+  background: linear-gradient(to top, #ffffff, #f7b8c1);
+}
+
 .menu {
   width: 100%;
-  height: 230px;
-  margin-bottom: 20px;
+  height: 240px;
+  top: 0;
+  transition: 0.4s;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 
   background: #f7b8c1; /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
@@ -48,6 +67,7 @@ h1 {
 }
 
 .title {
+  padding-right: 1000px;
   color: #808080;
   font-size: 4.5em;
   line-height: 70px;
@@ -55,8 +75,9 @@ h1 {
 
 .menu-items > li {
   display: inline;
-  margin-right: 70px;
-  font-size: larger;
+  font-family: "Times New Roman", Times, serif;
+  margin-right: 90px;
+  font-size: 15pt;
 }
 
 a:link,
@@ -143,6 +164,7 @@ a:hover {
   left: 1305px;
   top: 490px;
   font-size: 30pt;
+  z-index: 1;
 }
 
 .rightArrow > span {
@@ -155,6 +177,7 @@ a:hover {
   position: relative;
   bottom: 430px;
   right: 60px;
+  z-index: 1;
 }
 
 .leftArrow > span {
@@ -168,10 +191,12 @@ a:hover {
   font-size: 45pt;
   font-family: "Times New Roman", Times, serif;
   z-index: 3;
+  text-shadow: -1px 0px 0 rgb(255, 255, 255), 0px -1px 0 rgb(255, 255, 255),
+    -1px 1px 0 rgb(255, 255, 255), 1px 0px 0 rgb(255, 255, 255);
 
   position: relative;
-  bottom: 840px;
-  right: 300px;
+  bottom: 900px;
+  right: 450px;
 }
 
 .quote > span {
@@ -190,16 +215,17 @@ a:hover {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 
-  font-size: 3.5em;
+  font-size: 5em;
 }
 
 .gridImage:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
-
   transform: scale(1.1);
   transition-duration: 0.3s;
 
+  filter: brightness(110%);
+  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -217,12 +243,10 @@ a:hover {
   visibility: visible;
 }
 
-
-/*////////////////////////////////////// Different Screen Sizes ////////////////////////////////////////////*/
+/*/////////////////////////////////////////// Different Screen Sizes ////////////////////////////////////////////////////*/
 
 /* Laptops */
-@media only screen and (max-width: 1920px){
-
+@media only screen and (max-width: 1800px) {
   /* top menu bar*/
   .menu {
     width: 100%;
@@ -246,7 +270,7 @@ a:hover {
     z-index: 1;
     border-radius: 5%;
   }
-  
+
   .rightArrow {
     text-align: center;
     position: relative;
@@ -254,14 +278,14 @@ a:hover {
     top: 348px;
     font-size: 30pt;
   }
-  
+
   .leftArrow {
     text-align: center;
     position: relative;
     bottom: 350px;
     right: 67px;
   }
-  
+
   .quote {
     text-align: center;
     color: #bbb;
@@ -293,7 +317,7 @@ a:hover {
     font-size: 3.5em;
   }
 
-    /* Page Segmentation */
+  /* Page Segmentation */
   .slideshowSegment {
     height: 800px;
   }
@@ -301,7 +325,7 @@ a:hover {
   .firstSegment {
     width: 100%;
     right: 20px;
-  
+
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
       to bottom,
@@ -310,11 +334,11 @@ a:hover {
       rgba(255, 255, 255) 100%
     );
   }
-  
+
   .secondSegment {
     margin-top: 100px;
     width: 100%;
-  
+
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
       to bottom,
@@ -323,11 +347,11 @@ a:hover {
       rgb(255, 255, 255) 100%
     );
   }
-  
+
   .thirdSegment {
     margin-top: 100px;
     width: 100%;
-  
+
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
       to bottom,
@@ -336,13 +360,10 @@ a:hover {
       rgba(255, 255, 255) 100%
     );
   }
-
 }
 
-
-
 /*///////////////////////////////////////////////////////// Tablets //////////////////////////////////////////////////////////*/
-@media only Screen and (max-width: 1280px){
+@media only Screen and (max-width: 1280px) {
   /* top menu bar*/
   .menu {
     width: 100%;
@@ -366,8 +387,7 @@ a:hover {
     z-index: 1;
     border-radius: 5%;
   }
-  
-  
+
   .rightArrow {
     text-align: center;
     position: relative;
@@ -375,14 +395,14 @@ a:hover {
     top: -250px;
     font-size: 30pt;
   }
-  
+
   .leftArrow {
     text-align: center;
     position: relative;
     bottom: 250px;
     right: 880px;
   }
-  
+
   .quote {
     text-align: center;
     color: #bbb;
@@ -415,14 +435,14 @@ a:hover {
     text-align: center;
   }
 
-    /* Page Segmentation */
+  /* Page Segmentation */
   .slideshowSegment {
     height: 700px;
   }
 
   .firstSegment {
     width: 100%;
-  
+
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
       to bottom,
@@ -431,11 +451,11 @@ a:hover {
       rgba(255, 255, 255) 100%
     );
   }
-  
+
   .secondSegment {
     margin-top: 150px;
     width: 100%;
-  
+
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
       to bottom,
@@ -444,11 +464,11 @@ a:hover {
       rgb(255, 255, 255) 100%
     );
   }
-  
+
   .thirdSegment {
     margin-top: 150px;
     width: 100%;
-  
+
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
       to bottom,
@@ -457,26 +477,132 @@ a:hover {
       rgba(255, 255, 255) 100%
     );
   }
-  
 }
 
-
-/* For mobile phones */
-@media all and (max-device-width: 480px) {
+/*/////////////////////////////////////////////// For mobile phones /////////////////////////////////////////////////*/
+@media only Screen and (max-device-width: 480px) {
+  /* top menu bar*/
   .menu {
     width: 100%;
+    height: 180px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #f7b8c1; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
+    background: linear-gradient(to top, #ffffff, #f7b8c1);
   }
 
+  .title {
+    color: #808080;
+    font-size: 4em;
+    line-height: 60px;
+  }
+
+  .menu-items > li {
+    display: inline;
+    font-size: small;
+  }
+
+  /*SlideShow*/
   #myimg {
-    max-width: 620px;
+    max-width: 800px;
     height: auto;
-    align-content: center;
+    flex: 100%;
+    z-index: 1;
+    border-radius: 5%;
+  }
+
+  .rightArrow {
+    text-align: center;
+    position: relative;
+    left: 880px;
+    top: -250px;
+    font-size: 30pt;
+  }
+
+  .leftArrow {
+    text-align: center;
+    position: relative;
+    bottom: 250px;
+    right: 880px;
   }
 
   .quote {
+    text-align: center;
+    color: #bbb;
     font-size: 20pt;
+    font-family: "Times New Roman", Times, serif;
+    z-index: 3;
+
+    position: relative;
+    bottom: 200px;
+    right: 100px;
   }
+
   .quote > span {
-    font-size: 32pt;
+    font-size: 40pt;
+    font-style: italic;
+    color: #d1949a;
+  }
+
+  /* Grid Images */
+  .sectionTitles {
+    background-color: pink;
+    background-image: linear-gradient(to top, #f8dfdf, #f77588);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+    font-size: 8em;
+    text-align: center;
+  }
+
+  /* Page Segmentation */
+  .slideshowSegment {
+    height: 700px;
+  }
+
+  .firstSegment {
+    width: 100%;
+
+    background: #f7b8c1; /* fallback for old browsers */
+    background: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 0%,
+      rgb(255, 189, 198) 80%,
+      rgba(255, 255, 255) 100%
+    );
+  }
+
+  .secondSegment {
+    margin-top: 150px;
+    width: 100%;
+
+    background: #f7b8c1; /* fallback for old browsers */
+    background: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 0%,
+      rgb(255, 189, 198) 80%,
+      rgb(255, 255, 255) 100%
+    );
+  }
+
+  .thirdSegment {
+    margin-top: 150px;
+    width: 100%;
+
+    background: #f7b8c1; /* fallback for old browsers */
+    background: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 0%,
+      rgb(255, 189, 198) 80%,
+      rgba(255, 255, 255) 100%
+    );
   }
 }
