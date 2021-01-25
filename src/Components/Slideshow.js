@@ -56,13 +56,6 @@ const Slideshow = () => {
         alignItems: "center",
         justifyContent: "center",
         },
-        [theme.breakpoints.up('md')]: {
-            width: 700,
-            height: 500,
-        },
-        [theme.breakpoints.up('xs')]:{
-            
-        } 
     }
 ));
 
@@ -72,7 +65,7 @@ const Slideshow = () => {
         <div className="slideshowSegment">
             <Container className="slideshow" className={classes.container}>
                 <Fab onClick={() => { slideshowImageChanger(1) }} className="rightArrow"><span>&#10095;</span></Fab>
-                <img id="myimg" />
+                    <img id="myimg" className="slideshowImg"/>
                 <Fab onClick={() => { slideshowImageChanger(-1) }} className="leftArrow"><span>&#10094;</span></Fab>
             </Container>
 
