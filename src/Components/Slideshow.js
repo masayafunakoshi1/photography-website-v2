@@ -1,10 +1,15 @@
-import React, { useEffect } from 'react'
+import React, {useEffect} from 'react'
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import useFirestore from '../hooks/useFirestore'
 
+
 const Slideshow = () => {
+
+     useEffect(() => {
+        showSlides()
+    }, []);
 
     //Using firebase API storage, calling a google cloud URL and turning it into a regular URL and download it into the src of <img id="myimg">
 
@@ -22,7 +27,6 @@ const Slideshow = () => {
             firebaseImages(docs[slideIndex].url);
         };
     }
-    showSlides();
 
     const slideshowImageChanger = async (n) => {
         slideIndex += n;
