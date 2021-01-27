@@ -1,32 +1,36 @@
-import React, { useState } from "react"
+import React from "react"
 import './App.css';
-import Slideshow from './Components/Slideshow';
 import { } from './firebase/config'
 import MenuBar from "./Components/MenuBar"
-import GridImagesWeddings from "./Components/gridImages/GridImagesWeddings"
-import GridImagesEvents from "./Components/gridImages/GridImagesEvents"
-import GridImagesPersonal from "./Components/gridImages/GridImagesPersonal"
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Error from './Components/Error'
+import Contact from './Components/Contact'
+import Home from './Components/Home'
 import FadeOutMenu from './Components/FadeOutMenu'
 
 
-function App() {
+
+const App = () => {
 
   //functions
  
 
   //JSX
   return (
+    <BrowserRouter>
       <div className="App">
-        <FadeOutMenu>
-          <MenuBar />
-        </FadeOutMenu>
-        <div>
-          <Slideshow />
-          <GridImagesWeddings />
-          <GridImagesEvents />
-          <GridImagesPersonal />
+          <FadeOutMenu>
+            <MenuBar />
+          </FadeOutMenu>
+
+            <Switch>
+              <Route path="/" component = {Home} exact />
+              <Route path="/Contact" component={Contact}></Route>
+              <Route component = {Error} />
+            </Switch>
         </div>
-      </div>
+    </BrowserRouter>
+        
   );
 
 }
