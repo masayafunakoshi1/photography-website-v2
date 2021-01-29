@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import TextField from '@material-ui/core/TextField';
 
 const Contact = () => {
+    
     return (
         <div>
             <div>
