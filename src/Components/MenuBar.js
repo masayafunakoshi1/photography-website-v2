@@ -36,6 +36,7 @@ const MenuBar = () => {
                             anchorEl={anchorEl}
                             keepMounted
                             open={Boolean(anchorEl)}
+                            
                         >
 
                             <MenuItem onClick={handleClose}>Weddings</MenuItem>
