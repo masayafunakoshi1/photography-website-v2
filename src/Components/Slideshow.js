@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
@@ -26,6 +26,7 @@ const Slideshow = () => {
     }
 
     const firebaseImages = (url) => {
+        console.log(slideIndex)
         let img = document.getElementById("myimg");
         img.src = url;
     };
@@ -39,8 +40,10 @@ const Slideshow = () => {
         };
         await showSlides();
     }
+    
 
     //Automatic Slideshow (5 second timer, adds 1 to the slideIndex per 5 seconds)
+
     const autoSlideshowImageChanger = () => {
         slideshowImageChanger(1);
         console.log("image changed");
@@ -48,10 +51,8 @@ const Slideshow = () => {
     }
     setTimeout(autoSlideshowImageChanger, 100)
 
-    const slideshowImg = async (e) => {
-        e.target.className = "slideshowImg";
-    }
 
+    //Styles Material UI Slideshow
     const useStyles = makeStyles((theme) => ({
         container: {
         width: 1000,
@@ -67,7 +68,7 @@ const Slideshow = () => {
         <div className="slideshowSegment">
             <Container className="slideshow" className={classes.container}>
                 <Fab onClick={() => { slideshowImageChanger(1) }} className="rightArrow"><span>&#10095;</span></Fab>
-                    <img id="myimg" onChange={(e) => slideshowImg(e)}/>
+                    <img id="myimg"/>
                 <Fab onClick={() => { slideshowImageChanger(-1) }} className="leftArrow"><span>&#10094;</span></Fab>
             </Container>
 
