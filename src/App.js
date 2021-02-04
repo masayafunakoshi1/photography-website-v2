@@ -13,7 +13,7 @@ import FadeOutMenu from './Components/FadeOutMenu'
 const App = () => {
 
   //functions
- 
+  
 
   //JSX
   return (

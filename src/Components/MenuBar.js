@@ -1,13 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import {
     NavLink,
+    useLocation,
 } from "react-router-dom";
 
 
 const MenuBar = () => {
-    const [anchorEl, setAnchorEl] = useState(null);
+    const [anchorEl, setAnchorEl] = useState(null);    
+    
+    let location = useLocation()
+
+    console.log(location)
+
+    useEffect(() => {
+        if(location.pathname === "/Contact")
+            window.location.reload();
+    }, [])
 
     const handleHover = (e) => {
         setAnchorEl(e.currentTarget)
@@ -16,6 +26,8 @@ const MenuBar = () => {
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    
 
     return (
         <div className="menuApp">

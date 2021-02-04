@@ -27,8 +27,8 @@ const GridImagesEvents = () => {
         width: 600,
         height: 400,
             [theme.breakpoints.down('lg')]: {
-            width: 550,
-            height: 350,
+            width: 450,
+            height: 250,
             },
             [theme.breakpoints.down('md')]: {
             width: 780,
