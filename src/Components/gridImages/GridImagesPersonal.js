@@ -26,14 +26,14 @@ const GridImagesPersonal = () => {
         justifyContent: "center",
         width: 600,
         height: 400,
-         [theme.breakpoints.down('lg')]: {
-            width: 550,
-            height: 350,
+        [theme.breakpoints.down('lg')]: {
+            width: 450,
+            height: 250,
             },
             [theme.breakpoints.down('md')]: {
-            width: 980,
-            height: 780,
-            },
+                width: 780,
+                height: 580,           
+             },
         },
     }
 ));

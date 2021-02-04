@@ -263,7 +263,7 @@ a:hover {
 /*/////////////////////////////////////////// Different Screen Sizes ////////////////////////////////////////////////////*/
 
 /* Laptops */
-@media only screen and (max-width: 1800px) {
+@media only screen and (max-width: 1600px) {
   /* top menu bar*/
   .menu {
     width: 100%;
@@ -294,7 +294,7 @@ a:hover {
 
   /*SlideShow*/
   #myimg {
-    max-width: 1100px;
+    max-width: 1000px;
     height: auto;
     flex: 100%;
     z-index: 1;
@@ -304,8 +304,8 @@ a:hover {
   .rightArrow {
     text-align: center;
     position: relative;
-    left: 1110px;
-    top: 448px;
+    left: 1012px;
+    top: 380px;
     font-size: 30pt;
   }
 
@@ -319,17 +319,17 @@ a:hover {
   .quote {
     text-align: center;
     color: #bbb;
-    font-size: 40pt;
+    font-size: 35pt;
     font-family: "Times New Roman", Times, serif;
     z-index: 3;
 
     position: relative;
-    bottom: 690px;
+    bottom: 640px;
     right: 450px;
   }
 
   .quote > span {
-    font-size: 60pt;
+    font-size: 55pt;
     font-style: italic;
     color: #d1949a;
   }
@@ -350,7 +350,7 @@ a:hover {
   /* Page Segmentation */
   .slideshowSegment {
     height: 800px;
-    width: 1800px;
+    width: 100%;
   }
 
   .firstSegment {

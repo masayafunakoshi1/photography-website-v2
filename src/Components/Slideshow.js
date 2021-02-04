@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react'
+import { useLocation } from 'react-router-dom'
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
@@ -18,6 +19,7 @@ const Slideshow = () => {
 
     const { docs } = useFirestore('slideshowImages')
     let slideIndex = 0
+    let location = useLocation()
 
     const showSlides = () => {
     if (docs.length === 8) {
@@ -26,7 +28,7 @@ const Slideshow = () => {
     }
 
     const firebaseImages = (url) => {
-        console.log(slideIndex)
+        console.log(location.pathname)
         let img = document.getElementById("myimg");
         img.src = url;
     };
@@ -43,13 +45,25 @@ const Slideshow = () => {
     
 
     //Automatic Slideshow (5 second timer, adds 1 to the slideIndex per 5 seconds)
+    let timer;
+    const setTimer = () => {
+        timer = setTimeout(autoSlideshowImageChanger, 5000)
+    }
+
+    const stopTimer = () => {
+       clearTimeout(timer)
+    }
 
     const autoSlideshowImageChanger = () => {
         slideshowImageChanger(1);
         console.log("image changed");
-        setTimeout(autoSlideshowImageChanger, 5000)
-    }
-    setTimeout(autoSlideshowImageChanger, 100)
+        if(location.pathname === "/"){
+            setTimer()
+        } else if (location.pathname !== "/") {
+            stopTimer()
+        }
+    };
+    setTimeout(autoSlideshowImageChanger, 100);
 
 
     //Styles Material UI Slideshow
