@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import { useLocation } from 'react-router-dom'
+import {useLocation} from 'react-router-dom'
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
@@ -10,21 +10,29 @@ const Slideshow = () => {
     //Using firebase API storage, calling a google cloud URL and turning it into a regular URL and download it into the src of <img id="myimg">
     // const [slideIndex, setSlideIndex] = useState(0)
 
-    //////Checking for route path change//////
-    // componentDidUpdate(prevProps) {
-    //     if(this.props.location.pathname !== prevProps.location.pathname){
-    //         console.log("Route Change")
+    const { docs } = useFirestore('slideshowImages')
+    let slideIndex = 0
+    
+    const location = useLocation()
+
+     ///////Checking for route path change//////////
+
+    // const changeLocation = () => {
+    //     if(location.pathname !== "/"){
+    //         stopTimer();
     //     }
     // }
 
-    const { docs } = useFirestore('slideshowImages')
-    let slideIndex = 0
-    let location = useLocation()
+    //   useEffect(() => {
+    //     console.log('Location changed');
+    // }, [changeLocation]);
 
+     
+    //Show image from Firestore API after if() is fulfilled.
     const showSlides = () => {
-    if (docs.length === 8) {
-        firebaseImages(docs[slideIndex].url);
-        }
+        if (docs.length === 8) {
+            firebaseImages(docs[slideIndex].url);
+            }
     }
 
     const firebaseImages = (url) => {
@@ -33,6 +41,7 @@ const Slideshow = () => {
         img.src = url;
     };
 
+    //Allows user to manually change the slideshow with arrows, also lets slideshow to change automatically with settimeout function call
     const slideshowImageChanger = async (n) => {
             slideIndex += n
         if (slideIndex > 7) {
