@@ -1,8 +1,7 @@
 import React from "react"
 import './App.css';
-import { } from './firebase/config'
 import MenuBar from "./Components/MenuBar"
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 import Error from './Components/Error'
 import Contact from './Components/Contact'
 import Home from './Components/Home'
@@ -11,9 +10,15 @@ import FadeOutMenu from './Components/FadeOutMenu'
 
 
 const App = () => {
+  // const location = useLocation()
 
   //functions
   
+  // ////Checking for route path change//////
+  //   React.useEffect(() => {
+  //       console.log(location);
+  //   }, []);
+
 
   //JSX
   return (
