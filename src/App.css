@@ -6,7 +6,7 @@
 
 html,
 body {
-  width: 100%;
+  width: auto;
   height: 100%;
   margin: 0px;
   padding: 0px;
@@ -22,14 +22,14 @@ body {
   display: flex;
   flex-wrap: wrap;
 
-  width: 100%;
+  width: auto;
 }
 
 .menuApp {
   display: flex;
   flex-wrap: wrap;
 
-  width: 100%;
+  width: auto;
 }
 
 /* top menu bar*/
@@ -38,7 +38,7 @@ body {
 
 /* Attempting to make it become smaller as you scroll down from top */
 .menu.active {
-  width: 100%;
+  width: auto;
   height: 80px;
   top: 0;
   transition: 0.4s;
@@ -52,7 +52,7 @@ body {
 }
 
 .menu {
-  width: 100%;
+  width: auto;
   height: 240px;
   top: 0;
   transition: 0.4s;
@@ -103,11 +103,11 @@ a:hover {
 /* Page Segmentation */
 .slideshowSegment {
   height: 1100px;
-  width: 100%;
+  width: auto;
 }
 
 .firstSegment {
-  width: 100%;
+  width: auto;
   padding-left: 32px;
 
   background: #f7b8c1; /* fallback for old browsers */
@@ -121,7 +121,7 @@ a:hover {
 
 .secondSegment {
   margin-top: 150px;
-  width: 100%;
+  width: auto;
   padding-left: 32px;
 
   background: #f7b8c1; /* fallback for old browsers */
@@ -135,7 +135,7 @@ a:hover {
 
 .thirdSegment {
   margin-top: 150px;
-  width: 100%;
+  width: auto;
   padding-left: 32px;
 
   background: #f7b8c1; /* fallback for old browsers */
@@ -266,7 +266,7 @@ a:hover {
 @media only screen and (max-width: 1600px) {
   /* top menu bar*/
   .menu {
-    width: 100%;
+    width: auto;
     height: 180px;
     margin-bottom: 20px;
 
@@ -350,11 +350,11 @@ a:hover {
   /* Page Segmentation */
   .slideshowSegment {
     height: 800px;
-    width: 100%;
+    width: auto;
   }
 
   .firstSegment {
-    width: 100%;
+    width: auto;
     right: 20px;
 
     background: #f7b8c1; /* fallback for old browsers */
@@ -368,7 +368,7 @@ a:hover {
 
   .secondSegment {
     margin-top: 100px;
-    width: 1800px;
+    width: auto;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -381,7 +381,7 @@ a:hover {
 
   .thirdSegment {
     margin-top: 100px;
-    width: 100%;
+    width: auto;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -397,7 +397,7 @@ a:hover {
 @media only Screen and (max-width: 1280px) {
   /* top menu bar*/
   .menu {
-    width: 100%;
+    width: auto;
     height: 180px;
     margin-bottom: 20px;
 
@@ -472,7 +472,7 @@ a:hover {
   }
 
   .firstSegment {
-    width: 100%;
+    width: auto;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -485,7 +485,7 @@ a:hover {
 
   .secondSegment {
     margin-top: 150px;
-    width: 100%;
+    width: auto;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -498,7 +498,7 @@ a:hover {
 
   .thirdSegment {
     margin-top: 150px;
-    width: 100%;
+    width: auto;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -514,7 +514,7 @@ a:hover {
 @media only Screen and (max-device-width: 480px) {
   /* top menu bar*/
   .menu {
-    width: 100%;
+    width: auto;
     height: 180px;
     margin-bottom: 20px;
 
@@ -600,7 +600,7 @@ a:hover {
   }
 
   .firstSegment {
-    width: 100%;
+    width: auto;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -613,7 +613,7 @@ a:hover {
 
   .secondSegment {
     margin-top: 150px;
-    width: 100%;
+    width: auto;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -626,7 +626,7 @@ a:hover {
 
   .thirdSegment {
     margin-top: 150px;
-    width: 100%;
+    width: auto;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
