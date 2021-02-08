@@ -7,6 +7,7 @@ import {
 
 
 const MenuBar = () => {
+    //Dissappearing menu bar on scroll
     const [anchorEl, setAnchorEl] = useState(null);    
     
     //Trying to have page refresh on route change
