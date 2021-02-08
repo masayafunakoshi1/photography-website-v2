@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useState} from 'react'
 import {useLocation} from 'react-router-dom'
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,10 +12,14 @@ const Slideshow = () => {
 
     const { docs } = useFirestore('slideshowImages')
     let slideIndex = 0
+
+    //Adds mutable level to the firestore urls
+    const arrOfDocs = [...docs]
+    console.log(arrOfDocs)
     
     const location = useLocation()
 
-     ///////Checking for route path change//////////
+    ///////Checking for route path change//////////
 
     // const changeLocation = () => {
     //     if(location.pathname !== "/"){
@@ -27,52 +31,52 @@ const Slideshow = () => {
     //     console.log('Location changed');
     // }, [changeLocation]);
 
-     
-    //Show image from Firestore API after if() is fulfilled.
-    const showSlides = () => {
-        if (docs.length === 8) {
-            firebaseImages(docs[slideIndex].url);
-            }
-    }
+    
+    //Show image from Firestore API after if() is fulfilled
 
-    const firebaseImages = (url) => {
-        console.log(location.pathname)
-        let img = document.getElementById("myimg");
-        img.src = url;
-    };
+    const showSlides = () => {
+    if(arrOfDocs.length === 8){
+        firebaseImages(arrOfDocs[slideIndex].url);
+        }
+    }
 
     //Allows user to manually change the slideshow with arrows, also lets slideshow to change automatically with settimeout function call
     const slideshowImageChanger = async (n) => {
-            slideIndex += n
-        if (slideIndex > 7) {
-            slideIndex = 0
-        } else if (slideIndex < 0) {
-            slideIndex = 7
-        };
-        await showSlides();
+        slideIndex += n;
+        console.log("image changed");
+    if (slideIndex > 7) {
+        slideIndex = 0
+    } else if (slideIndex < 0) {
+        slideIndex = 7
+    };
+    await showSlides();
     }
-    
 
-    //Automatic Slideshow (5 second timer, adds 1 to the slideIndex per 5 seconds)
+
+    const firebaseImages = (url) => {
+        let img = document.getElementById("myimg");
+        console.log("image changed2");
+        img.src = url;
+    };
+
+
+    // Automatic Slideshow (5 second timer, adds 1 to the slideIndex per 5 seconds)
     let timer;
     const setTimer = () => {
         timer = setTimeout(autoSlideshowImageChanger, 5000)
+        console.log("Set Timer")
     }
 
     const stopTimer = () => {
-       clearTimeout(timer)
+    clearTimeout(timer)
+    console.log("Stopped timer")
     }
 
     const autoSlideshowImageChanger = () => {
         slideshowImageChanger(1);
-        console.log("image changed");
-        if(location.pathname === "/"){
-            setTimer()
-        } else if (location.pathname !== "/") {
-            stopTimer()
-        }
+        setTimer();
     };
-    setTimeout(autoSlideshowImageChanger, 100);
+        setTimeout(autoSlideshowImageChanger, 100);
 
 
     //Styles Material UI Slideshow
