@@ -3,26 +3,21 @@ import {useLocation} from 'react-router-dom'
 import { useLastLocation } from 'react-router-last-location';
 import TextField from '@material-ui/core/TextField';
 
-const Contact = (refresh, setRefresh) => {
-    // const location = useLocation();
-    // const pathName = location.pathname
+const Contact = (props) => {
+    const location = useLocation();
     const lastLocation = useLastLocation();
 
-    const handleRefresh = () => {
-         window.location.reload();
-    }
-
-    console.log(lastLocation.pathname)
+    console.log(location.pathname)
     
-    useEffect(() => {
-    // if(lastLocation.pathname === "/"){
-    //         handleRefresh();
-    // } else {
-    //     console.log("No Refresh")
-    // }
-        
-        //refresh page on load (still attempting to find a better solution with react router)
 
+    //Attempt at making page refresh when refresh state is "true"
+    useEffect(() => {
+    console.log(props.refresh)
+    if(location.pathname === "/Contact"){
+        props.refreshCheck();
+    } else {
+        console.log("No Refresh")
+    } 
     }, [])
 
   

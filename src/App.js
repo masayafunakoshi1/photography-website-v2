@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import './App.css';
 import MenuBar from "./Components/MenuBar"
 import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
@@ -15,11 +15,20 @@ const App = () => {
   // const location = useLocation()
 
   //functions
-  
-  // ////Checking for route path change//////
-  //   React.useEffect(() => {
-  //       console.log(location);
-  //   }, []);
+
+  //Attempting to make page refresh when refresh state is "true"
+  const handleRefresh = () => {
+        window.location.reload();
+  }
+
+  const refreshCheck = () => {
+    if(refresh){
+      handleRefresh();
+      setRefresh(false);
+    } else {
+      console.log("No Refresh")
+    }
+  }
 
 
   //JSX
@@ -28,13 +37,13 @@ const App = () => {
       <LastLocationProvider>
         <div className="App">
             <FadeOutMenu>
-              <MenuBar />
+              <MenuBar  refresh = {refresh} setRefresh = {setRefresh} refreshCheck = {refreshCheck} />
             </FadeOutMenu>
 
               <Switch>
-                <Route path="/" component = {Home} exact />
+                <Route exact path="/" component = {Home} />
                 
-                <Route path="/Contact" component={Contact} refresh = {refresh} setRefresh = {setRefresh}></Route>
+                <Route path="/Contact" refresh={refresh} refreshCheck = {refreshCheck}></Route>
   
                 <Route component = {Error} />
               </Switch>

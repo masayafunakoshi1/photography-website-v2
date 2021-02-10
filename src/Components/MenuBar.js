@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 
-const MenuBar = () => {
+const MenuBar = ( {setRefresh, refresh, refreshCheck}) => {
     //Dissappearing menu bar on scroll
     const [anchorEl, setAnchorEl] = useState(null);    
     
