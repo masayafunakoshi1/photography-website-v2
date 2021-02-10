@@ -13,27 +13,15 @@ const Slideshow = () => {
     const { docs } = useFirestore('slideshowImages')
     let slideIndex = 0
 
+    const location = useLocation();
+    console.log(location)
+
     //Adds mutable level to the firestore urls
     const arrOfDocs = [...docs]
     console.log(arrOfDocs)
     
-    const location = useLocation()
-
-    ///////Checking for route path change//////////
-
-    // const changeLocation = () => {
-    //     if(location.pathname !== "/"){
-    //         stopTimer();
-    //     }
-    // }
-
-    //   useEffect(() => {
-    //     console.log('Location changed');
-    // }, [changeLocation]);
-
     
     //Show image from Firestore API after if() is fulfilled
-
     const showSlides = () => {
     if(arrOfDocs.length === 8){
         firebaseImages(arrOfDocs[slideIndex].url);
@@ -43,7 +31,7 @@ const Slideshow = () => {
     //Allows user to manually change the slideshow with arrows, also lets slideshow to change automatically with settimeout function call
     const slideshowImageChanger = async (n) => {
         slideIndex += n;
-        console.log("image changed");
+        console.log(location.pathname);
     if (slideIndex > 7) {
         slideIndex = 0
     } else if (slideIndex < 0) {
@@ -56,7 +44,12 @@ const Slideshow = () => {
     const firebaseImages = (url) => {
         let img = document.getElementById("myimg");
         console.log("image changed2");
-        img.src = url;
+        if(location.pathname === "/"){
+            img.src = url;
+        } else if (location.pathname !== "/"){
+            img.src = "https://firebasestorage.googleapis.com/v0/b/photography-website-v2.appspot.com/o/slideshow-images%2FKevin%26Patricia2.jpg?alt=media&token=f46a6ba2-4452-4ef0-a5fe-1f18a0ff5c55"
+        }
+        
     };
 
 
