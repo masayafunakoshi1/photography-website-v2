@@ -1,24 +1,17 @@
 import React, {useEffect} from 'react'
-import {useLocation} from 'react-router-dom'
-import { useLastLocation } from 'react-router-last-location';
 import TextField from '@material-ui/core/TextField';
 
 const Contact = (props) => {
-    const location = useLocation();
-    const lastLocation = useLastLocation();
-
-    console.log(location.pathname)
-    
 
     //Attempt at making page refresh when refresh state is "true"
-    useEffect(() => {
-    console.log(props.refresh)
-    if(location.pathname === "/Contact"){
-        props.refreshCheck();
-    } else {
-        console.log("No Refresh")
-    } 
-    }, [])
+    // useEffect(() => {
+    // console.log(props.refresh)
+    // if(location.pathname === "/Contact"){
+    //     props.refreshCheck();
+    // } else {
+    //     console.log("No Refresh")
+    // } 
+    // }, [])
 
   
 
