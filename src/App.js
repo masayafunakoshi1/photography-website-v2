@@ -11,24 +11,25 @@ import FadeOutMenu from './Components/FadeOutMenu'
 
 
 const App = () => {
-  const [refresh, setRefresh] = useState(false);
+  // const [refresh, setRefresh] = useState(false);
   // const location = useLocation()
 
   //functions
 
   //Attempting to make page refresh when refresh state is "true"
-  const handleRefresh = () => {
-        window.location.reload();
-  }
 
-  const refreshCheck = () => {
-    if(refresh){
-      handleRefresh();
-      setRefresh(false);
-    } else {
-      console.log("No Refresh")
-    }
-  }
+  // const handleRefresh = () => {
+  //       window.location.reload();
+  // }
+
+  // const refreshCheck = () => {
+  //   if(refresh){
+  //     handleRefresh();
+  //     setRefresh(false);
+  //   } else {
+  //     console.log("No Refresh")
+  //   }
+  // }
 
 
   //JSX
@@ -37,13 +38,13 @@ const App = () => {
       <LastLocationProvider>
         <div className="App">
             <FadeOutMenu>
-              <MenuBar  refresh = {refresh} setRefresh = {setRefresh} refreshCheck = {refreshCheck} />
+              <MenuBar />
             </FadeOutMenu>
 
               <Switch>
                 <Route exact path="/" component = {Home} />
                 
-                <Route path="/Contact" refresh={refresh} refreshCheck = {refreshCheck}></Route>
+                <Route path="/Contact" component = {Contact}></Route>
   
                 <Route component = {Error} />
               </Switch>

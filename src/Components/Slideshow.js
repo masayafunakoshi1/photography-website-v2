@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {useLocation} from 'react-router-dom'
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
@@ -8,19 +8,14 @@ import useFirestore from '../hooks/useFirestore'
 
 const Slideshow = () => {
     //Using firebase API storage, calling a google cloud URL and turning it into a regular URL and download it into the src of <img id="myimg">
-    // const [slideIndex, setSlideIndex] = useState(0)
-
     const { docs } = useFirestore('slideshowImages')
-    let slideIndex = 0
-
-    const location = useLocation();
-    console.log(location)
+    const [slideIndex, setSlideIndex] = useState(0)
+    
 
     //Adds mutable level to the firestore urls
     const arrOfDocs = [...docs]
-    console.log(arrOfDocs)
-    
-    
+
+
     //Show image from Firestore API after if() is fulfilled
     const showSlides = () => {
     if(arrOfDocs.length === 8){
@@ -28,48 +23,42 @@ const Slideshow = () => {
         }
     }
 
-    //Allows user to manually change the slideshow with arrows, also lets slideshow to change automatically with settimeout function call
-    const slideshowImageChanger = async (n) => {
-        slideIndex += n;
-        console.log(location.pathname);
-    if (slideIndex > 7) {
-        slideIndex = 0
-    } else if (slideIndex < 0) {
-        slideIndex = 7
-    };
-    await showSlides();
-    }
-
-
     const firebaseImages = (url) => {
         let img = document.getElementById("myimg");
-        console.log("image changed2");
-        if(location.pathname === "/"){
-            img.src = url;
-        } else if (location.pathname !== "/"){
-            img.src = "https://firebasestorage.googleapis.com/v0/b/photography-website-v2.appspot.com/o/slideshow-images%2FKevin%26Patricia2.jpg?alt=media&token=f46a6ba2-4452-4ef0-a5fe-1f18a0ff5c55"
-        }
-        
+        console.log("image changed2")
+            img.src = url; 
+    };
+
+    
+        //Allows user to manually change the slideshow with arrows, also lets slideshow to change automatically with settimeout function call
+    const slideshowImageChanger = async (n) => {
+        setSlideIndex(slideIndex + n)
+
+        console.log(slideIndex)
+        showSlides();
+    }
+
+    if (slideIndex > 7) {
+        setSlideIndex(slideIndex - 8)
+    } else if (slideIndex < 0) {
+        setSlideIndex(slideIndex + 7)
     };
 
 
     // Automatic Slideshow (5 second timer, adds 1 to the slideIndex per 5 seconds)
-    let timer;
-    const setTimer = () => {
-        timer = setTimeout(autoSlideshowImageChanger, 5000)
-        console.log("Set Timer")
-    }
 
-    const stopTimer = () => {
-    clearTimeout(timer)
-    console.log("Stopped timer")
-    }
+    useEffect(() => {
+        slideshowImageChanger(1)
+        console.log('useEffect 2 ran')
+    }, [])
 
-    const autoSlideshowImageChanger = () => {
-        slideshowImageChanger(1);
-        setTimer();
-    };
-        setTimeout(autoSlideshowImageChanger, 100);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            console.log("useEffect ran")
+            slideshowImageChanger(1);
+        }, 4000);
+        return() => clearTimeout(timer)
+    }, [slideIndex])
 
 
     //Styles Material UI Slideshow
