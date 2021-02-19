@@ -19,8 +19,8 @@ const Slideshow = () => {
     if(arrOfDocs.length === 8){
         firebaseImages(arrOfDocs[slideIndex].url);
         console.log("Loaded length-8")
-        imageFadeIn();
         }
+        imageFadeIn();
     }
 
     const firebaseImages = (url) => {
@@ -34,7 +34,7 @@ const Slideshow = () => {
     const slideshowImageChanger = (n) => {
         setSlideIndex(slideIndex + n)
         console.log(slideIndex)
-        showSlides() 
+        showSlides(); 
     }
 
     if (slideIndex > 7) {
@@ -46,27 +46,31 @@ const Slideshow = () => {
     const imageFadeIn = () => {
         let img = document.getElementById("myimg");
         img.classList.add('Visible')
+        console.log("class added")
         setTimeout(() => {
                 img.classList.remove("Visible")
-            }, 5300);
-            ;
+                console.log("class removed")
+            }, 4500);
     }
+
+    // const imageFadeOut = () => {
+    //     let img = document.getElementById("myimg");
+    //     setTimeout(() => {
+    //         img.classList.remove("Visible")
+    //         console.log("class removed")
+    //         }, 4000);
+    // }
     
 
 
     // Automatic Slideshow (5 second timer, adds 1 to the slideIndex per 5 seconds)
-    useEffect(() => {
-        slideshowImageChanger(1)
-        console.log('useEffect 2 ran')
-    }, [])
-
     useEffect(() => {
         const timer = setTimeout(() => {
             console.log("useEffect ran")
             slideshowImageChanger(1);
         }, 6000);
         return() => clearTimeout(timer)
-    }, [slideIndex])
+    }, [[], slideIndex])
 
 
 

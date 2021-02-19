@@ -158,13 +158,11 @@ a:hover {
 
 .slideshowImg {
   opacity: 0;
-  transition: all 0.5s;
-  visibility: hidden;
+  transition: opacity 1.4s ease-in;
 }
 .slideshowImg.Visible {
   opacity: 1;
-  transition: all 0.5s;
-  visibility: visible;
+  transition: opacity 1s ease-in;
 }
 
 /* In Slideshow.JS */
