@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import useFirestore from '../hooks/useFirestore'
+import Loading from './Loading';
 
 
 const Slideshow = () => {
@@ -10,22 +11,20 @@ const Slideshow = () => {
     const { docs } = useFirestore('slideshowImages')
     const [slideIndex, setSlideIndex] = useState(0)
 
-    //Adds another adjustable level to the firestore urls
-    const arrOfDocs = [...docs]
-
-
     //Show image from Firestore API after if() is fulfilled
     const showSlides = () => {
-    if(arrOfDocs.length === 8){
-        firebaseImages(arrOfDocs[slideIndex].url);
-        console.log("Loaded length-8")
-        }
+        if(docs.length === 8){
+            firebaseImages(docs[slideIndex].url);
+            console.log("Loaded length-8")
+            } else {
+                console.log('error')
+            }
         imageFadeIn();
     }
 
     const firebaseImages = (url) => {
         let img = document.getElementById("myimg");
-        console.log("image changed2")
+        console.log("image changed showed")
         img.src = url;
     };
 
@@ -53,24 +52,16 @@ const Slideshow = () => {
             }, 4500);
     }
 
-    // const imageFadeOut = () => {
-    //     let img = document.getElementById("myimg");
-    //     setTimeout(() => {
-    //         img.classList.remove("Visible")
-    //         console.log("class removed")
-    //         }, 4000);
-    // }
-    
-
 
     // Automatic Slideshow (5 second timer, adds 1 to the slideIndex per 5 seconds)
+
     useEffect(() => {
         const timer = setTimeout(() => {
             console.log("useEffect ran")
             slideshowImageChanger(1);
         }, 6000);
         return() => clearTimeout(timer)
-    }, [[], slideIndex])
+    }, [slideIndex])
 
 
 
