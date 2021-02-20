@@ -10,7 +10,7 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
+  overflow-x: visible;
 
   align-items: center;
   align-content: center;
@@ -25,6 +25,7 @@ body {
 
 .contact-Title {
   font-size: 60pt;
+  text-decoration: underline 4px solid rgb(255, 227, 232);
   text-align: center;
 
   background-image: linear-gradient(to top, #f8dfdf, #f77588);
@@ -47,6 +48,7 @@ body {
 .textFields {
   flex: 0 0 100%;
   margin-bottom: 300px;
+  margin-left: 80px;
   max-width: 50%;
 }
 
@@ -61,10 +63,16 @@ body {
   flex-direction: column;
   position: relative;
   top: 150px;
+  left: 60px;
 }
 
 .contactIcons {
   margin: 0 0 80px 0;
+}
+
+.contactsText {
+  padding-left: 40px;
+  font-size: 16pt;
 }
 
 .socials {
@@ -73,8 +81,10 @@ body {
   justify-content: space-around;
   position: relative;
   top: 150px;
+  left: 60px;
 }
 
 .socialIcons {
-  margin-right: 30px;
+  margin-right: 50px;
+  cursor: pointer;
 }
