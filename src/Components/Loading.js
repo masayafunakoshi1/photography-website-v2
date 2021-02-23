@@ -4,15 +4,14 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 const Loading = () => {
 
+//Figure out how to change the size of circle
+
 const useStyles = makeStyles(() => ({
     root: {
-        position: "relative", 
-        display: "inline-flex",
-        '& > * + *': {
-            marginTop: '400px'
+        size: 80
         },
-    },
-    }));
+    }
+    ))
 
     const classes = useStyles();
 

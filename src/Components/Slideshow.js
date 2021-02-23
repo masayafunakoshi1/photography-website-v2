@@ -8,14 +8,16 @@ import Loading from './Loading';
 
 const Slideshow = () => {
     //Using firebase API storage, calling a google cloud URL and turning it into a regular URL and download it into the src of <img id="myimg">
-    const { docs } = useFirestore('slideshowImages')
-    const [slideIndex, setSlideIndex] = useState(0)
+    const { docs } = useFirestore('slideshowImages');
+    const [slideIndex, setSlideIndex] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
+    
 
     //Show image from Firestore API after if() is fulfilled
     const showSlides = () => {
         if(docs.length === 8){
             firebaseImages(docs[slideIndex].url);
-            console.log("Loaded length-8")
+            console.log("Loaded length 8");
             } else {
                 console.log('error')
             }
@@ -23,9 +25,9 @@ const Slideshow = () => {
     }
 
     const firebaseImages = (url) => {
-        let img = document.getElementById("myimg");
+        document.getElementById("myimg").src = url;
         console.log("image changed showed")
-        img.src = url;
+        setIsLoading(false)
     };
 
     
@@ -61,7 +63,7 @@ const Slideshow = () => {
             slideshowImageChanger(1);
         }, 6000);
         return() => clearTimeout(timer)
-    }, [slideIndex])
+    }, [showSlides])
 
 
 
@@ -72,6 +74,8 @@ const Slideshow = () => {
         alignItems: "right",
         justifyContent: "right",
         },
+
+        
     }
 ));
 
@@ -82,6 +86,7 @@ const Slideshow = () => {
             <Container className="slideshow" >
                 <Fab onClick={() => { slideshowImageChanger(1) }} className="rightArrow"><span>&#10095;</span></Fab>
                     <img id="myimg" className="slideshowImg" />
+                    {isLoading && <Loading />}
                 <Fab onClick={() => { slideshowImageChanger(-1) }} className="leftArrow"><span>&#10094;</span></Fab>
             </Container>
 
