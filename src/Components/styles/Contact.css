@@ -62,8 +62,8 @@ body {
   flex: 50%;
   flex-direction: column;
   position: relative;
-  top: 150px;
-  left: 60px;
+  left: 55%;
+  bottom: 570px;
 }
 
 .contactIcons {
@@ -80,11 +80,91 @@ body {
   width: 400px;
   justify-content: space-around;
   position: relative;
-  top: 150px;
-  left: 60px;
+  bottom: 570px;
+  left: 55%;
 }
 
 .socialIcons {
   margin-right: 50px;
   cursor: pointer;
+}
+
+/*/////////////////////////////////////////////// Responsive to Screen Sizes ////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 1600px) {
+  .contacts-Container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .textFields {
+    margin-bottom: 300px;
+    max-width: 100%;
+  }
+
+  /* Contacts and Socials container */
+  .contactsAndSocials {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts {
+    flex: 50%;
+    flex-direction: column;
+    position: absolute;
+    top: 1000px;
+    left: 25%;
+  }
+
+  .contactIcons {
+    margin: 0 0 30px 0;
+  }
+
+  .contactsText {
+    padding-left: 40px;
+    font-size: 16pt;
+  }
+
+  .socials {
+    width: 400px;
+    position: absolute;
+    top: 1250px;
+    left: 25%;
+  }
+
+  .socialIcons {
+    margin-right: 50px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .textFields {
+    margin-right: 100px;
+    margin-bottom: 300px;
+    max-width: 100%;
+  }
+
+  .contacts {
+    flex: 50%;
+    flex-direction: column;
+    position: absolute;
+    top: 1000px;
+    left: 35%;
+  }
+
+  .socials {
+    width: 400px;
+    position: absolute;
+    top: 1250px;
+    left: 35%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .textFields {
+    flex: 0 0 100%;
+    margin-bottom: 300px;
+    margin-right: 200px;
+  }
 }

@@ -214,6 +214,13 @@ a:hover {
   color: #d1949a;
 }
 
+.MuiCircularProgress-root {
+  position: absolute;
+  display: inline-flex;
+  left: 50%;
+  margin-top: 300px;
+}
+
 /* Grid Images */
 .sectionTitles {
   background-color: pink;
