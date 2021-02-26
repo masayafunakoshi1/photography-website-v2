@@ -4,17 +4,18 @@ import Grid from '@material-ui/core/Grid';
 import useFirestore from '../../hooks/useFirestore'
 import FadeInSections from '../FadeInSections'
 import Modal from '@material-ui/core/Modal';
+import Modals from './Modals'
 
 const GridImagesWeddings = () => {
     const { docs } = useFirestore('gridImagesWeddings')
-    const [open, setOpen] = useState(0);
+    const [openImage, setOpenImage] = useState(0);
 
     const handleOpen = (x) => {
-        setOpen(x);
+        setOpenImage(x);
     };
 
     const handleClose = () => {
-        setOpen(0);
+        setOpenImage(0);
     };
 
     //Gets image URL from firebase, called in img src
@@ -36,17 +37,19 @@ const GridImagesWeddings = () => {
         width: 600,
         height: 400,
             [theme.breakpoints.down('lg')]: {
-            width: 450,
-            height: 250,
+            width: 390,
+            height: 'auto',
             },
             [theme.breakpoints.down('md')]: {
-                width: 780,
-                height: 580,
+                width: 550,
+                height: 'auto',
              },
         },
+        //Modal Styles
         paper: {
             position: 'absolute',
             maxWidth: '1300px',
+            transition: ".5s",
             boxShadow: theme.shadows[7],
             left: '15%',
             top: "5%",
@@ -73,29 +76,29 @@ const GridImagesWeddings = () => {
                 <div className={classes.root}>
                 <FadeInSections>
                     <Grid container justify="center" spacing={2}>
-                        <Grid item md={12} lg={4} xl={4} className="gridImage">
-                            <img src={showImage(0)} className={classes.img} onClick={() =>{handleOpen(1)}}>
-                            </img>
-                             <Modal
-                                open={open === 1}
-                                onClose={handleClose}
-                                >
-                                <img src={showImage(0)} className={classes.paper}></img>
-                            </Modal>
+                        <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
+                            <img src={showImage(0)} className={classes.img} onClick={() =>{handleOpen(1)}} />
+                            {/* Modals added to each image */}
+                             <Modals
+                                whichImgtoOpen={openImage}
+                                handleClose={handleClose}
+                             >
+                                <img src={showImage(0)} className={classes.paper} />
+                            </Modals>
                         </Grid>
-                        <Grid item md={12} lg={4} xl={4} className="gridImage">
+                        <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
                             <img src={showImage(1)} className={classes.img} onClick={() =>{handleOpen(2)}}></img>
                             <Modal
-                            open={open === 2}
+                            open={openImage === 2}
                             onClose={handleClose}
                             >
                             <img src={showImage(1)} className={classes.paper}></img>
                             </Modal>
                         </Grid>
-                        <Grid item md={12} lg={4} xl={4} className="gridImage">
+                        <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
                             <img src={showImage(2)} className={classes.img} onClick={() =>{handleOpen(3)}}></img>
                             <Modal
-                                open={open === 3}
+                                open={openImage === 3}
                                 onClose={handleClose}
                                 >
                                 <img src={showImage(2)} className={classes.paper}></img>
@@ -106,28 +109,28 @@ const GridImagesWeddings = () => {
 
                 <FadeInSections>
                     <Grid container justify="center" spacing={2}>
-                        <Grid item md={12} lg={4} xl={4} className="gridImage">
+                        <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
                             <img src={showImage(3)} className={classes.img} onClick={() =>{handleOpen(4)}}></img>
                              <Modal
-                                open={open === 4}
+                                open={openImage === 4}
                                 onClose={handleClose}
                                 >
                                 <img src={showImage(3)} className={classes.paper}></img>
                             </Modal>
                         </Grid>
-                        <Grid item md={12} lg={4} xl={4} className="gridImage">
+                        <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
                             <img src={showImage(4)} className={classes.img} onClick={() =>{handleOpen(5)}}></img>
                              <Modal
-                                open={open === 5}
+                                open={openImage === 5}
                                 onClose={handleClose}
                                 >
                                 <img src={showImage(4)} className={classes.paper}></img>
                             </Modal>
                         </Grid>
-                        <Grid item md={12} lg={4} xl={4} className="gridImage">
+                        <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
                             <img src={showImage(5)} className={classes.img} onClick={() =>{handleOpen(6)}}></img>
                             <Modal
-                                open={open === 6}
+                                open={openImage === 6}
                                 onClose={handleClose}
                                 >
                                 <img src={showImage(5)} className={classes.paper}></img>

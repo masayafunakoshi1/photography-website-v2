@@ -70,11 +70,11 @@ const Slideshow = () => {
        //Styles Material UI Slideshow
     const useStyles = makeStyles(() => ({
         container: {
-        width: 1000,
+        maxWidth: 1300,
         alignItems: "right",
         justifyContent: "right",
-        },
 
+        },
         
     }
 ));

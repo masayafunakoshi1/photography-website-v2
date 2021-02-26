@@ -6,11 +6,10 @@
 
 html,
 body {
-  width: auto;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
 }
 
 /* Fonts */
@@ -52,7 +51,7 @@ body {
 }
 
 .menu {
-  width: auto;
+  max-width: 2100px;
   height: 240px;
   top: 0;
   transition: 0.4s;
@@ -103,11 +102,11 @@ a:hover {
 /* Page Segmentation */
 .slideshowSegment {
   height: 1100px;
-  width: auto;
+  width: 100vw;
 }
 
 .firstSegment {
-  width: auto;
+  width: 100vw;
   padding-left: 32px;
 
   background: #f7b8c1; /* fallback for old browsers */
@@ -121,7 +120,7 @@ a:hover {
 
 .secondSegment {
   margin-top: 150px;
-  width: auto;
+  width: 100vw;
   padding-left: 32px;
 
   background: #f7b8c1; /* fallback for old browsers */
@@ -135,7 +134,7 @@ a:hover {
 
 .thirdSegment {
   margin-top: 150px;
-  width: auto;
+  width: 100vw;
   padding-left: 32px;
 
   background: #f7b8c1; /* fallback for old browsers */
@@ -270,7 +269,7 @@ a:hover {
 @media only screen and (max-width: 1600px) {
   /* top menu bar*/
   .menu {
-    width: auto;
+    max-width: 1600px;
     height: 180px;
     margin-bottom: 20px;
 
@@ -284,7 +283,7 @@ a:hover {
   }
 
   .title {
-    padding-right: 600px;
+    padding-right: 490px;
     color: #808080;
     font-size: 4.5em;
     line-height: 70px;
@@ -303,21 +302,20 @@ a:hover {
     flex: 100%;
     z-index: 1;
     border-radius: 5%;
+    margin-left: 150px;
   }
 
   .rightArrow {
-    text-align: center;
-    position: relative;
-    left: 1012px;
-    top: 380px;
+    position: absolute;
+    left: 1215px;
+    top: -353px;
     font-size: 30pt;
   }
 
   .leftArrow {
-    text-align: center;
-    position: relative;
-    bottom: 350px;
-    right: 67px;
+    position: absolute;
+    bottom: 410px;
+    left: 140px;
   }
 
   .quote {
@@ -325,11 +323,10 @@ a:hover {
     color: #bbb;
     font-size: 35pt;
     font-family: "Times New Roman", Times, serif;
-    z-index: 3;
 
     position: relative;
-    bottom: 640px;
-    right: 450px;
+    bottom: 700px;
+    right: 350px;
   }
 
   .quote > span {
@@ -354,11 +351,11 @@ a:hover {
   /* Page Segmentation */
   .slideshowSegment {
     height: 800px;
-    width: auto;
+    width: 100vw;
   }
 
   .firstSegment {
-    width: auto;
+    width: 100vw;
     right: 20px;
 
     background: #f7b8c1; /* fallback for old browsers */
@@ -372,7 +369,7 @@ a:hover {
 
   .secondSegment {
     margin-top: 100px;
-    width: auto;
+    width: 100vw;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -385,7 +382,7 @@ a:hover {
 
   .thirdSegment {
     margin-top: 100px;
-    width: auto;
+    width: 100vw;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -401,7 +398,7 @@ a:hover {
 @media only Screen and (max-width: 1280px) {
   /* top menu bar*/
   .menu {
-    width: auto;
+    max-width: 1280px;
     height: 180px;
     margin-bottom: 20px;
 
@@ -414,6 +411,18 @@ a:hover {
     background: linear-gradient(to top, #ffffff, #f7b8c1);
   }
 
+  .title {
+    padding-right: 380px;
+    color: #808080;
+    font-size: 4.5em;
+    line-height: 70px;
+  }
+
+  .menu-items > li {
+    font-family: "Times New Roman", Times, serif;
+    margin-right: 80px;
+    font-size: 15pt;
+  }
   /*SlideShow*/
   #myimg {
     max-width: 800px;
@@ -424,18 +433,16 @@ a:hover {
   }
 
   .rightArrow {
-    text-align: center;
-    position: relative;
-    left: 880px;
-    top: -250px;
+    left: 1015px;
+    top: -290px;
     font-size: 30pt;
   }
 
   .leftArrow {
     text-align: center;
     position: relative;
-    bottom: 250px;
-    right: 880px;
+    bottom: 290px;
+    left: -865px;
   }
 
   .quote {
@@ -445,7 +452,6 @@ a:hover {
     font-family: "Times New Roman", Times, serif;
     z-index: 3;
 
-    position: relative;
     bottom: 200px;
     right: 100px;
   }
@@ -466,17 +472,18 @@ a:hover {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 
-    font-size: 8em;
+    font-size: 4em;
     text-align: center;
   }
 
   /* Page Segmentation */
   .slideshowSegment {
     height: 700px;
+    width: 100vw;
   }
 
   .firstSegment {
-    width: auto;
+    width: 100vw;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -489,7 +496,7 @@ a:hover {
 
   .secondSegment {
     margin-top: 150px;
-    width: auto;
+    width: 100vw;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -502,7 +509,7 @@ a:hover {
 
   .thirdSegment {
     margin-top: 150px;
-    width: auto;
+    width: 100vw;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -518,7 +525,7 @@ a:hover {
 @media only Screen and (max-device-width: 480px) {
   /* top menu bar*/
   .menu {
-    width: auto;
+    max-width: 480px;
     height: 180px;
     margin-bottom: 20px;
 
@@ -601,10 +608,11 @@ a:hover {
   /* Page Segmentation */
   .slideshowSegment {
     height: 700px;
+    width: 100vw;
   }
 
   .firstSegment {
-    width: auto;
+    width: 100vw;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -617,7 +625,7 @@ a:hover {
 
   .secondSegment {
     margin-top: 150px;
-    width: auto;
+    width: 100vw;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -630,7 +638,7 @@ a:hover {
 
   .thirdSegment {
     margin-top: 150px;
-    width: auto;
+    width: 100vw;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
