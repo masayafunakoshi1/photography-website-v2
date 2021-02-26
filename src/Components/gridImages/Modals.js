@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
-const Modals = () => {
+const Modals = (props, whichImgtoOpen, handleClose) => {
 
     const useStyles = makeStyles((theme) => ({
-     paper: {
+        paper: {
             position: 'absolute',
             maxWidth: '1300px',
             boxShadow: theme.shadows[7],
@@ -26,17 +26,14 @@ const Modals = () => {
     const classes = useStyles();
 
     return (
-        <div>
-            
+    <div>
         <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="simple-modal-title"
-            aria-describedby="simple-modal-description"
+        open={whichImgtoOpen === 1}
+        onClose={handleClose}
         >
-            {body}
+            {props.children}
         </Modal>
-        </div>
+    </div>
     );
 }
 
