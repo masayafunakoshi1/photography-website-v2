@@ -48,13 +48,13 @@ const GridImagesPersonal = () => {
             <FadeInSections>
                     <Grid container justify="center" spacing={2}>
                         <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
-                            <img src={showImage(0)} className={classes.img} onClick={() =>{handleOpen(1)}}></img>
+                            <img src={showImage(0)} className={classes.img}></img>
                         </Grid>
                         <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
-                            <img src={showImage(1)} className={classes.img} onClick={() =>{handleOpen(1)}}></img>
+                            <img src={showImage(1)} className={classes.img}></img>
                         </Grid>
                         <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
-                            <img src={showImage(2)} className={classes.img} onClick={() =>{handleOpen(1)}}></img>
+                            <img src={showImage(2)} className={classes.img}></img>
                         </Grid>
                     </Grid>
                 </FadeInSections>
@@ -62,13 +62,13 @@ const GridImagesPersonal = () => {
                 <FadeInSections>
                     <Grid container justify="center" spacing={2}>
                         <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
-                            <img src={showImage(3)} className={classes.img} onClick={() =>{handleOpen(1)}}></img>
+                            <img src={showImage(3)} className={classes.img}></img>
                         </Grid>
                         <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
-                            <img src={showImage(4)} className={classes.img} onClick={() =>{handleOpen(1)}}></img>
+                            <img src={showImage(4)} className={classes.img}></img>
                         </Grid>
                         <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
-                            <img src={showImage(5)} className={classes.img} onClick={() =>{handleOpen(1)}}></img>
+                            <img src={showImage(5)} className={classes.img}></img>
                         </Grid>
                     </Grid>
                 </FadeInSections>
