@@ -7,8 +7,16 @@ import Modal from '@material-ui/core/Modal';
 import Modals from './Modals'
 
 const GridImagesWeddings = () => {
-    const { docs } = useFirestore('gridImagesWeddings')
     const [openImage, setOpenImage] = useState(0);
+    const { docs } = useFirestore('gridImagesWeddings')
+
+    //Gets image URL from firebase, called in img src
+    const showImage = (imageIndex) => {
+    if (docs.length === 6) {
+        return docs[imageIndex].url;
+        };
+    }
+
 
     const handleOpen = (x) => {
         setOpenImage(x);
@@ -17,13 +25,6 @@ const GridImagesWeddings = () => {
     const handleClose = () => {
         setOpenImage(0);
     };
-
-    //Gets image URL from firebase, called in img src
-    const showImage = (imageIndex) => {
-    if (docs.length === 6) {
-        return docs[imageIndex].url;
-        };
-    }
 
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -75,17 +76,30 @@ const GridImagesWeddings = () => {
 
                 <div className={classes.root}>
                 <FadeInSections>
+
+                    {/* Trying to figure out how to make Modal component reusable. (DRY) */}
+                    {/* <Grid container justify="center" spacing={2}>
+                        <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
+                         <img src={showImage(galleryImgNum)} className={classes.img} onClick={() =>{handleOpen(0)}} />
+                            <Modals galleryImgNum={galleryImgNum} setGalleryImgNum={0} openImage={openImage} setOpenImage={setOpenImage}>
+                                <img src={showImage(openImage)} className={classes.paper} />
+                            </Modals>
+                        </Grid> */}
+
                     <Grid container justify="center" spacing={2}>
                         <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
-                            <img src={showImage(0)} className={classes.img} onClick={() =>{handleOpen(1)}} />
-                            {/* Modals added to each image */}
-                             <Modals
-                                whichImgtoOpen={openImage}
-                                handleClose={handleClose}
-                             >
+                            {/* Grid img shown with "classes" style. handle open making openImage = 1 */}
+                         <img src={showImage(0)} className={classes.img} onClick={() =>{handleOpen(1)}} />
+                            {/* Modal design, opens (if openImage === 1) then closes by (setOpenImage = 0)*/}
+                           <Modal
+                            open={openImage === 1}
+                            onClose={handleClose}
+                            >
+                                {/* Modal img shown, first firebase img (docs[0])*/}
                                 <img src={showImage(0)} className={classes.paper} />
-                            </Modals>
+                            </Modal>
                         </Grid>
+
                         <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
                             <img src={showImage(1)} className={classes.img} onClick={() =>{handleOpen(2)}}></img>
                             <Modal
@@ -95,6 +109,7 @@ const GridImagesWeddings = () => {
                             <img src={showImage(1)} className={classes.paper}></img>
                             </Modal>
                         </Grid>
+
                         <Grid item sm={12} md={6} lg={4} xl={4} className="gridImage">
                             <img src={showImage(2)} className={classes.img} onClick={() =>{handleOpen(3)}}></img>
                             <Modal
@@ -104,6 +119,7 @@ const GridImagesWeddings = () => {
                                 <img src={showImage(2)} className={classes.paper}></img>
                             </Modal>
                         </Grid>
+
                     </Grid>
                 </FadeInSections>
 
