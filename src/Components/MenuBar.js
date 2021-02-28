@@ -10,16 +10,6 @@ const MenuBar = ( {setRefresh, refresh, refreshCheck}) => {
     //Dissappearing menu bar on scroll
     const [anchorEl, setAnchorEl] = useState(null);    
     
-    //Trying to have page refresh on route change
-    // let location = useLocation()
-
-    // console.log(location)
-
-    // useEffect(() => {
-    //     if(location.pathname === "/Contact")
-    //         window.location.reload();
-    // }, [])
-
     const handleHover = (e) => {
         setAnchorEl(e.currentTarget)
     };
@@ -57,8 +47,8 @@ const MenuBar = ( {setRefresh, refresh, refreshCheck}) => {
                             <MenuItem onClick={handleClose}>Nature</MenuItem>
                         </Menu>
                     </li>
-                    <li><a >About</a></li>
-                    <li><a >FAQ</a></li>
+                    <li><NavLink to="/About">About</NavLink></li>
+                    <li><NavLink to="/FreqAskQuestions">FAQ</NavLink></li>
                     <li><NavLink to="/Contact">Contact</NavLink></li>
                 </ul>
             </header>
