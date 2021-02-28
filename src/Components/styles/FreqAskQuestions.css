@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: visible;
+
+  align-items: center;
+  align-content: center;
+}
+
+.faqPage {
+  max-width: 100%;
+}
+
+.faq-Title {
+  font-size: 40pt;
+  text-decoration: underline 4px solid rgb(255, 227, 232);
+  text-align: center;
+
+  background-image: linear-gradient(to top, #f8dfdf, #f77588);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
