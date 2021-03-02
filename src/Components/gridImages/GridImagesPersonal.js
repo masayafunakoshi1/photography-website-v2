@@ -5,7 +5,7 @@ import useFirestore from '../../hooks/useFirestore'
 import FadeInSections from '../FadeInSections';
 
 const GridImagesPersonal = () => {
-
+    
     const { docs } = useFirestore('gridImagesPersonal')
 
     //Gets image URL from firebase, called in img src

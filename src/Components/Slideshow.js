@@ -44,6 +44,8 @@ const Slideshow = () => {
         setSlideIndex(slideIndex + 7)
     };
 
+
+    //Adds "Visible" class to image to make it fade-in, then removes class to fade-out
     const imageFadeIn = () => {
         let img = document.getElementById("myimg");
         img.classList.add('Visible')
@@ -51,11 +53,11 @@ const Slideshow = () => {
         setTimeout(() => {
                 img.classList.remove("Visible")
                 console.log("class removed")
-            }, 4500);
+            }, 4500); //Removes visibility every 4.5 seconds taking the remaining 1.5 seconds to transition (img to white, white to next img)
     }
 
 
-    // Automatic Slideshow (5 second timer, adds 1 to the slideIndex per 5 seconds)
+    // Automatic Slideshow (6 second timer, adds 1 to the slideIndex per 6 seconds)
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -73,11 +75,9 @@ const Slideshow = () => {
         maxWidth: 1300,
         alignItems: "right",
         justifyContent: "right",
-
-        },
-        
-    }
-));
+            },
+        }
+    ));
 
     const classes = useStyles();
 
