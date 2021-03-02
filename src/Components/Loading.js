@@ -8,7 +8,7 @@ const Loading = () => {
 
 const useStyles = makeStyles(() => ({
     root: {
-        size: 80
+        size: 80,
         },
     }
     ))

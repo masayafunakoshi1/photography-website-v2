@@ -33,7 +33,11 @@ const GridImagesEvents = () => {
             [theme.breakpoints.down('md')]: {
             width: 550,
             height: 'auto',
-            }
+            },
+            [theme.breakpoints.down('sm')]: {
+            width: 900,
+            height: 'auto',
+            },
         },
     })
 );
@@ -43,6 +47,7 @@ const GridImagesEvents = () => {
 
     return (
         <div className="secondSegment">
+
             <h1 className="sectionTitles">Events</h1>
 
             <div className={classes.root}>
