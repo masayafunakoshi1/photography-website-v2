@@ -10,7 +10,7 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: visible;
+  overflow-x: hidden;
 
   align-items: center;
   align-content: center;
@@ -18,12 +18,14 @@ body {
 
 .aboutPage {
   min-width: 100%;
+  max-height: 1400px;
 }
 
 .about-Title {
   font-size: 40pt;
-  text-decoration: underline 4px solid rgb(255, 227, 232);
+  /* text-decoration: underline 4px solid rgb(255, 227, 232); */
   text-align: center;
+  margin-bottom: 40px;
 
   background-image: linear-gradient(to top, #f8dfdf, #f77588);
   -webkit-background-clip: text;
@@ -34,21 +36,39 @@ body {
 
 .pictureHolder {
   align-content: center;
+  flex-direction: column;
+  display: flex;
+  max-width: 800px;
+  margin-right: 0px;
 }
 
 .pictureOfMe {
-  width: 800px;
+  margin: 30px 20px;
+  width: 850px;
   height: auto;
-  position: relative;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
+  left: 10%;
 }
 
 .aboutMeText {
-  text-align: center;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 950px;
+  bottom: 1200px;
+  font-size: 15pt;
 }
 
-.text1 {
-  text-align: center;
+p {
+  margin-top: 50px;
+  text-indent: 50px;
+  line-height: 1.8;
+}
+
+/*/////////////////////////////////////////////// Responsive to Screen Sizes ////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 1600px) {
+}
+
+@media only Screen and (max-width: 1280px) {
 }

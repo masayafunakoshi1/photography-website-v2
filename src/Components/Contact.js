@@ -2,6 +2,7 @@ import React from 'react'
 import ContactForm from './contactComponents/ContactForm'
 import Socials from './contactComponents/Socials'
 import './styles/Contact.css'
+import '../App.css'
 
 const Contact = () => {
 
