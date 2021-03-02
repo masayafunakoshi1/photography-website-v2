@@ -56,6 +56,31 @@ const Slideshow = () => {
             }, 4500); //Removes visibility every 4.5 seconds taking the remaining 1.5 seconds to transition (img to white, white to next img)
     }
 
+    ///Hides arrows until image is loaded
+
+    const rightArrowFadeIn = () => {
+        let rightArrow = document.getElementById("rightArrow");
+        if(isLoading){
+            rightArrow.classList.add('invisible')
+        }  else {
+            rightArrow.classList.remove('invisible')
+        }
+    }
+
+    const leftArrowFadeIn = () => {
+        let leftArrow = document.getElementById("leftArrow");
+        if(isLoading){
+            leftArrow.classList.add('invisible')
+        } else {
+            leftArrow.classList.remove('invisible')
+        }
+    }
+
+        useEffect(() => {
+        rightArrowFadeIn();
+        leftArrowFadeIn();
+    }, [isLoading])
+
 
     // Automatic Slideshow (6 second timer, adds 1 to the slideIndex per 6 seconds)
 
@@ -66,8 +91,6 @@ const Slideshow = () => {
         }, 6000);
         return() => clearTimeout(timer)
     }, [showSlides])
-
-
 
        //Styles Material UI Slideshow
     const useStyles = makeStyles(() => ({
@@ -84,10 +107,10 @@ const Slideshow = () => {
     return (
         <div className="slideshowSegment">
             <Container className="slideshow" >
-                <Fab onClick={() => { slideshowImageChanger(1) }} className="rightArrow"><span>&#10095;</span></Fab>
+                <Fab id="rightArrow" onClick={() => { slideshowImageChanger(1) }} className="rightArrow"><span>&#10095;</span></Fab>
                     <img id="myimg" className="slideshowImg" />
                     {isLoading && <Loading />}
-                <Fab onClick={() => { slideshowImageChanger(-1) }} className="leftArrow"><span>&#10094;</span></Fab>
+                <Fab id="leftArrow" onClick={() => { slideshowImageChanger(-1) }} className="leftArrow"><span>&#10094;</span></Fab>
             </Container>
 
             <Container className="quote">

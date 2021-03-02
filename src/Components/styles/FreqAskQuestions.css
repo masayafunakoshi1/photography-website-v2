@@ -22,7 +22,7 @@ body {
 
 .faq-Title {
   font-size: 40pt;
-  text-decoration: underline 4px solid rgb(255, 227, 232);
+  /* text-decoration: underline 4px solid rgb(255, 227, 232); */
   text-align: center;
   margin-bottom: 60px;
 
