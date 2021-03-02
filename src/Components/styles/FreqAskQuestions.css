@@ -17,13 +17,14 @@ body {
 }
 
 .faqPage {
-  max-width: 100%;
+  min-width: 100%;
 }
 
 .faq-Title {
   font-size: 40pt;
   text-decoration: underline 4px solid rgb(255, 227, 232);
   text-align: center;
+  margin-bottom: 60px;
 
   background-image: linear-gradient(to top, #f8dfdf, #f77588);
   -webkit-background-clip: text;
