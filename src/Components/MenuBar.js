@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import {
@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 
-const MenuBar = ( {setRefresh, refresh, refreshCheck}) => {
+const MenuBar = () => {
     //Dissappearing menu bar on scroll
     const [anchorEl, setAnchorEl] = useState(null);    
     
@@ -21,7 +21,6 @@ const MenuBar = ( {setRefresh, refresh, refreshCheck}) => {
     
 
     return (
-        <div className="menuApp">
             <header className="menu">
                 <h1 className="title"><NavLink to="/">MasaFuna <br />Photos </NavLink></h1>
 
@@ -52,7 +51,6 @@ const MenuBar = ( {setRefresh, refresh, refreshCheck}) => {
                     <li><NavLink to="/Contact">Contact</NavLink></li>
                 </ul>
             </header>
-        </div >
     )
 }
 
