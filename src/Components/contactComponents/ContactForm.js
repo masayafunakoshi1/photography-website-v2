@@ -7,7 +7,7 @@ import '../styles/Contact.css'
 import Button from '@material-ui/core/Button';
 
 
-const ContactForm = () => {
+const ContactForm = (props) => {
     
 const [contactData, setContactData] = useState({
         email: "",
@@ -24,9 +24,12 @@ const [contactData, setContactData] = useState({
         })
         .then(() => {
             console.log("Document successfully written!");
+             props.successAlertHandler();
         })
         .catch((error) => {
             console.error("Error writing document: ", error);
+                props.errorAlertHandler()
+           
         });
     }
  
@@ -41,7 +44,6 @@ const [contactData, setContactData] = useState({
         });
     }
 
-
     //Styles
     const useStyles = makeStyles((theme) => ({
         textFieldRoot: {
@@ -50,10 +52,26 @@ const [contactData, setContactData] = useState({
             top: '120px',
             width: '500px',
             left: '300px',
+            [theme.breakpoints.down('lg')]: {
+                top: '120px',
+                left: '200px',
+            },
+            [theme.breakpoints.down('sm')]: {
+                top: '0px',
+                left: '0px',
+                width: '350px'
+            },
             },
             '& > *': {
             left: '206px',
             top: '360px',
+             [theme.breakpoints.down('lg')]: {
+                left: '105px',
+                },
+            [theme.breakpoints.down('sm')]: {
+                left: '280px',
+                top: '0px',
+                },
             },
         },
         typography: {
@@ -64,7 +82,7 @@ const [contactData, setContactData] = useState({
      const classes = useStyles();
 
     return (
-        <div className="contacts-Container">
+        <div >
                 <div className="textFields">
                     <form noValidate autoComplete="off" className={classes.textFieldRoot} >
                             <TextField type="text" id="standard-basic" label="Full-Name" value={contactData.fullName} onChange={e => {
@@ -106,7 +124,11 @@ const [contactData, setContactData] = useState({
                             variant="outlined"
                             />
 
-                            <Button variant="contained" color="primary" onClick={handleSubmit}> Submit </Button>
+                            <Button 
+                            variant="contained" 
+                            color="primary" 
+                            onClick={handleSubmit}
+                            > Submit </Button>
 
                     </form>
                 </div>
