@@ -46,8 +46,6 @@ body {
 }
 
 .textFields {
-  flex: 0 0 100%;
-  margin-bottom: 300px;
   margin-left: 80px;
   max-width: 50%;
 }
@@ -63,12 +61,12 @@ body {
   flex-direction: column;
   position: relative;
   left: 55%;
-  bottom: 570px;
+  bottom: 270px;
   max-width: 380px;
 }
 
 .contactIcons {
-  margin: 0 0 80px 0;
+  margin: 0 0 70px 0;
 }
 
 .contactsText {
@@ -81,7 +79,7 @@ body {
   width: 400px;
   justify-content: space-around;
   position: relative;
-  bottom: 570px;
+  bottom: 280px;
   left: 55%;
 }
 
@@ -90,35 +88,41 @@ body {
   cursor: pointer;
 }
 
+.successAlert.hide {
+  visibility: hidden;
+}
+
+.errorAlert.hide {
+  visibility: hidden;
+}
+
 /*/////////////////////////////////////////////// Responsive to Screen Sizes ////////////////////////////////////////////////////////*/
 
 @media only screen and (max-width: 1600px) {
   .contacts-Container {
     display: flex;
-    justify-content: center;
   }
 
   .textFields {
-    margin-bottom: 300px;
-    max-width: 100%;
+    max-width: 50%;
+    flex-direction: column;
   }
 
   /* Contacts and Socials container */
   .contactsAndSocials {
     display: flex;
     flex-direction: column;
+    padding-right: 200px;
   }
 
   .contacts {
     flex: 50%;
     flex-direction: column;
-    position: absolute;
-    top: 1000px;
-    left: 25%;
+    left: 73%;
   }
 
   .contactIcons {
-    margin: 0 0 30px 0;
+    margin: 0 0 40px 0;
   }
 
   .contactsText {
@@ -127,10 +131,9 @@ body {
   }
 
   .socials {
-    width: 400px;
-    position: absolute;
-    top: 1250px;
-    left: 25%;
+    width: 450px;
+    bottom: 200px;
+    left: 73%;
   }
 
   .socialIcons {
@@ -142,30 +145,40 @@ body {
 @media only screen and (max-width: 1250px) {
   .textFields {
     margin-right: 100px;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
     max-width: 100%;
   }
 
   .contacts {
     flex: 50%;
     flex-direction: column;
-    position: absolute;
-    top: 1000px;
-    left: 35%;
+    top: 50px;
+    left: 40%;
   }
 
   .socials {
     width: 400px;
-    position: absolute;
-    top: 1250px;
-    left: 35%;
+    top: 50px;
+    left: 40%;
   }
 }
 
 @media only screen and (max-width: 650px) {
   .textFields {
     flex: 0 0 100%;
-    margin-bottom: 300px;
-    margin-right: 200px;
+    margin-bottom: 20px;
+  }
+
+  .contacts {
+    flex: 50%;
+    flex-direction: column;
+    top: 20px;
+    left: 40%;
+  }
+
+  .socials {
+    width: 400px;
+    top: 20px;
+    left: 40%;
   }
 }
