@@ -25,7 +25,7 @@ const App = () => {
             {/* </FadeOutMenu> */}
               <Switch>
                 <Route exact path="/" component = {Home} />
-                
+
                 <Route path="/Contact" component = {Contact}></Route>
                 <Route path="/FreqAskQuestions" component = {FreqAskQuestions}></Route>
                 <Route path="/About" component = {About}></Route>
