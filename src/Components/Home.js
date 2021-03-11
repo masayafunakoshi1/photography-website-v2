@@ -3,7 +3,7 @@ import Slideshow from './Slideshow';
 import GridImagesWeddings from "./gridImages/GridImagesWeddings"
 import GridImagesEvents from "./gridImages/GridImagesEvents"
 import GridImagesPersonal from "./gridImages/GridImagesPersonal"
-import Loading from "./Loading";
+import ScrollToTop from './ScrollToTop'
 
 
 
@@ -20,8 +20,8 @@ const Home = () => {
             <GridImagesWeddings />
             <GridImagesEvents />
             <GridImagesPersonal />
-            </div>
-        </div>    
+        </div>
+      </div>    
   );
 
 }
