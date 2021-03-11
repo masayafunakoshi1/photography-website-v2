@@ -263,6 +263,23 @@ a:hover {
   visibility: visible;
 }
 
+/* Scroll to Top Button */
+/* .scrollToTopArrowHidden {
+  visibility: hidden;
+  transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+  will-change: opacity, visibility;
+} */
+
+.scrollToTopArrowVisible {
+  position: fixed;
+  left: 45%;
+  opacity: 0.5;
+}
+
+.scrollToTopArrowVisible:hover {
+  opacity: 1;
+}
+
 /*/////////////////////////////////////////// Different Screen Sizes ////////////////////////////////////////////////////*/
 
 /* Laptops */

@@ -10,6 +10,7 @@ import Home from './Components/Home'
 import Contact from './Components/Contact'
 import FreqAskQuestions from "./Components/FreqAskQuestions";
 import About from './Components/About'
+import ScrollToTop from './Components/ScrollToTop'
 
 
 
@@ -22,7 +23,6 @@ const App = () => {
             {/* <FadeOutMenu> */}
               <MenuBar />
             {/* </FadeOutMenu> */}
-
               <Switch>
                 <Route exact path="/" component = {Home} />
                 
