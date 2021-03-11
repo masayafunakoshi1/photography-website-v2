@@ -4,6 +4,7 @@ import Fab from '@material-ui/core/Fab';
 import NavigationIcon from '@material-ui/icons/Navigation';
 
 const ScrollToTop = (props) => {
+
     const [ scrollArrow, setScrollArrow] = useState(false)
     const scrollingWrapperContainer = useRef(null)
 
@@ -25,8 +26,8 @@ const ScrollToTop = (props) => {
     //Listening for the scroll event with the scroll "checker"
     useEffect(() => {
         if(scrollingWrapperContainer !== null && scrollingWrapperContainer.current !== null){
-        scrollingWrapperContainer.current.addEventListener('scroll', checkScrollTop);
-        console.log(scrollingWrapperContainer.current)
+        scrollingWrapperContainer.current.addEventListener('scroll', checkScrollTop());
+        console.log(scrollingWrapperContainer.current.scrollTop)
         } else{console.log('error')}
         // return () => {
         //     scrollingWrapperContainer.current.removeEventListener('scroll', checkScrollTop)
@@ -45,7 +46,7 @@ const ScrollToTop = (props) => {
 
     const classes = useStyles();
     return (
-        <div>
+        <div ref={scrollingWrapperContainer}>
             {scrollArrow && (<Fab 
             className='scrollToTopArrowVisible' 
             variant="extended" 
@@ -55,9 +56,6 @@ const ScrollToTop = (props) => {
                 Back To Top
             </Fab>)}
 
-            <div ref={scrollingWrapperContainer}>
-                {props.children}
-            </div>
         </div>
     )
 }

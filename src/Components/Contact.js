@@ -42,14 +42,13 @@ const Contact = () => {
 
     return (
         <div className="contactPage">
-            <ScrollToTop>
             <div>
                 <div className={classes.root}>
                     <Alert className={`successAlert ${successAlert ? '' : 'hide'}`} severity="success">Message Sent!</Alert>
                     <Alert className={`errorAlert ${errorAlert ? '' : 'hide'}`} severity = "error">Message was unable to send :(</Alert>
                 </div>
                 <h1 className="contact-Title">Contact Us</h1>
-                <h3 className="contact-Subtext">
+                <h3 className="contact-Subtext">  
                     For Bookings, Inquiries, Questions or Comments, please fill out the form below. 
                     <br/>Will get back to you as soon as we can!
                 </h3>
@@ -60,7 +59,6 @@ const Contact = () => {
             errorAlertHandler={errorAlertHandler}
             />
             <Socials />
-            </ScrollToTop>
         </div>
     )
 }

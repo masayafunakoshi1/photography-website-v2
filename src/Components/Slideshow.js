@@ -137,6 +137,10 @@ const Slideshow = () => {
 
 
     // Automatic Slideshow (6 second timer, adds 1 to the slideIndex per 6 seconds)
+    //Run it once on pageload to stop delay
+    useEffect(() => {
+        slideshowImageChanger(1);
+    }, [])
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -145,6 +149,7 @@ const Slideshow = () => {
         }, 6000);
         return() => clearTimeout(timer)
     }, [showSlides])
+
 
        //Styles Material UI Slideshow
     const useStyles = makeStyles(() => ({
