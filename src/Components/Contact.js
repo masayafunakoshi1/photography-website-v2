@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Alert from '@material-ui/lab/Alert';
 import './styles/Contact.css'
 import '../App.css'
+import ScrollToTop from './ScrollToTop'
 
 const Contact = () => {
     const[successAlert, setSuccessAlert] = useState(false)
@@ -40,8 +41,8 @@ const Contact = () => {
     
 
     return (
-
         <div className="contactPage">
+            <ScrollToTop>
             <div>
                 <div className={classes.root}>
                     <Alert className={`successAlert ${successAlert ? '' : 'hide'}`} severity="success">Message Sent!</Alert>
@@ -59,6 +60,7 @@ const Contact = () => {
             errorAlertHandler={errorAlertHandler}
             />
             <Socials />
+            </ScrollToTop>
         </div>
     )
 }
