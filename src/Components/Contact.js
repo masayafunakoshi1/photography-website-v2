@@ -26,7 +26,6 @@ const Contact = () => {
         }, 2000)
     }
 
-
     const useStyles = makeStyles((theme) => ({
         root: {
             width: '100%',
@@ -37,11 +36,11 @@ const Contact = () => {
         }));
 
         const classes = useStyles();
-
     
 
     return (
         <div className="contactPage">
+            <ScrollToTop />
             <div>
                 <div className={classes.root}>
                     <Alert className={`successAlert ${successAlert ? '' : 'hide'}`} severity="success">Message Sent!</Alert>
@@ -53,12 +52,13 @@ const Contact = () => {
                     <br/>Will get back to you as soon as we can!
                 </h3>
             </div>
-
+                      
             <ContactForm 
             successAlertHandler={successAlertHandler}
             errorAlertHandler={errorAlertHandler}
             />
-            <Socials />
+           <Socials />
+           
         </div>
     )
 }

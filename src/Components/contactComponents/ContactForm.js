@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import '../styles/Contact.css'
 
 import Button from '@material-ui/core/Button';
+import ScrollToTop from '../ScrollToTop';
 
 
 const ContactForm = (props) => {

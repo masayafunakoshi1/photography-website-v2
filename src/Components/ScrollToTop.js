@@ -4,37 +4,30 @@ import Fab from '@material-ui/core/Fab';
 import NavigationIcon from '@material-ui/icons/Navigation';
 
 const ScrollToTop = (props) => {
+    const [ showScroll, setShowScroll ] = useState(false);
 
-    const [ scrollArrow, setScrollArrow] = useState(false)
-    const scrollingWrapperContainer = useRef(null)
-
-    //Checks if component has been scrolled more than 100px's, then setsState to True
-    const checkScrollTop = () => {
-        if(!scrollArrow && scrollingWrapperContainer.current.scrollTop > 50){
-            setScrollArrow(true)
-        } else if(scrollArrow && scrollingWrapperContainer.current.scrollTop <= 50){
-            setScrollArrow(false)
-        }
+    const checkScroll = () => {
+        console.log(window.pageYOffset)
+        if(!showScroll && window.pageYOffset > 50){
+            setShowScroll(true)
+        } else if (showScroll && window.pageYOffset <= 50){
+            setShowScroll(false)
+        } 
     }
-  
-    //Makes page go to top
+
     const onClickHandler = () => {
-        console.log('button clicked')
-        scrollingWrapperContainer.scrollTo(0,0);
-    }
+        console.log("button clicked")
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
 
-    //Listening for the scroll event with the scroll "checker"
     useEffect(() => {
-        if(scrollingWrapperContainer !== null && scrollingWrapperContainer.current !== null){
-        scrollingWrapperContainer.current.addEventListener('scroll', checkScrollTop());
-        console.log(scrollingWrapperContainer.current.scrollTop)
-        } else{console.log('error')}
-        // return () => {
-        //     scrollingWrapperContainer.current.removeEventListener('scroll', checkScrollTop)
-        // }
+        console.log("useEffect added")
+        window.addEventListener('scroll', checkScroll, true)
+        return(window.removeEventListener('scroll', checkScroll))
     }, [])
-
- 
 
 
     //Styles
@@ -46,18 +39,17 @@ const ScrollToTop = (props) => {
 
     const classes = useStyles();
     return (
-        <div ref={scrollingWrapperContainer}>
-            {scrollArrow && (<Fab 
+        <div className="arrowHolderDiv" >
+            {showScroll ? <Fab 
             className='scrollToTopArrowVisible' 
             variant="extended" 
             onClick={() => onClickHandler()} 
             >
                 <NavigationIcon className={classes.extendedIcon}/>
                 Back To Top
-            </Fab>)}
-
+            </Fab> : <h1>Scroll</h1>}
         </div>
     )
 }
 
-export default ScrollToTop
+export default ScrollToTop 

@@ -4,6 +4,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import {
     NavLink,
 } from "react-router-dom";
+import ScrollToTop from './ScrollToTop'
 
 
 const MenuBar = () => {
@@ -38,12 +39,24 @@ const MenuBar = () => {
                             anchorEl={anchorEl}
                             keepMounted
                             open={Boolean(anchorEl)}
-                            
                         >
 
-                            <MenuItem onClick={handleClose}>Weddings</MenuItem>
-                            <MenuItem onClick={handleClose}>Events</MenuItem>
-                            <MenuItem onClick={handleClose}>Nature</MenuItem>
+                            <NavLink to ="/Weddings">
+                                <MenuItem onClick={handleClose}>
+                                    Weddings
+                                </MenuItem>
+                            </NavLink>
+                            <NavLink to ="/Events">
+                                <MenuItem onClick={handleClose}>
+                                    Events
+                                </MenuItem>
+                            </NavLink>
+                            <NavLink to ="/Nature">
+                                <MenuItem onClick={handleClose}>
+                                    Nature
+                                </MenuItem>
+                            </NavLink>
+
                         </Menu>
                     </li>
                     <li><NavLink to="/About">About</NavLink></li>

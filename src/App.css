@@ -3,7 +3,6 @@ body {
   width: 100%;
   margin: 0px 0px 0px 0px;
   padding: 0px;
-  overflow-x: hidden;
 }
 
 /* Fonts */
@@ -35,7 +34,7 @@ body {
   transition: 0.4s;
 
   position: fixed;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 1000;
   background: #f7b8c1; /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
@@ -269,15 +268,22 @@ a:hover {
   will-change: opacity, visibility;
 } */
 
-.scrollToTopArrowVisible {
+.arrowHolderDiv {
   position: fixed;
   left: 45%;
+  top: 90%;
+  z-index: 99;
+}
+
+.scrollToTopArrowVisible {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .scrollToTopArrowVisible:hover {
   opacity: 1;
 }
+
 
 /*/////////////////////////////////////////// Different Screen Sizes ////////////////////////////////////////////////////*/
 
