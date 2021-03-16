@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
 
     return (
         <div className={classes.root} className="loader">
-            <CircularProgress />
+            <CircularProgress size={100} />
             
         </div>
     )

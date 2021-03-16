@@ -10,6 +10,10 @@ import Home from './Components/Home'
 import Contact from './Components/Contact'
 import FreqAskQuestions from "./Components/FreqAskQuestions";
 import About from './Components/About'
+
+import Weddings from './Components/galleries/Weddings'
+import Events from './Components/galleries/Events'
+import Nature from './Components/galleries/Nature'
 import ScrollToTop from './Components/ScrollToTop'
 
 
@@ -20,11 +24,17 @@ const App = () => {
   return (
     <Router>
         <div className="App">
+        
             {/* <FadeOutMenu> */}
               <MenuBar />
             {/* </FadeOutMenu> */}
               <Switch>
                 <Route exact path="/" component = {Home} />
+
+                <Route path="/Weddings" component = {Weddings}></Route>
+                <Route path="/Events" component = {Events}></Route>
+                <Route path="/Nature" component = {Nature}></Route>
+
 
                 <Route path="/Contact" component = {Contact}></Route>
                 <Route path="/FreqAskQuestions" component = {FreqAskQuestions}></Route>
@@ -32,6 +42,7 @@ const App = () => {
   
                 <Route component = {Error} />
               </Switch>
+              
           </div>
     </Router>
         
