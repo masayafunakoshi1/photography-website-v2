@@ -7,17 +7,17 @@ const ScrollToTop = (props) => {
     const [ showScroll, setShowScroll ] = useState(false);
 
     const checkScroll = () => {
-        console.log(window.pageYOffset)
-        if(!showScroll && window.pageYOffset > 50){
+        console.log(document.body.scrollTop)
+        if(!showScroll && document.body.scrollTop > 500){
             setShowScroll(true)
-        } else if (showScroll && window.pageYOffset <= 50){
+        } else if (document.body.scrollTop <= 500){
             setShowScroll(false)
         } 
     }
 
     const onClickHandler = () => {
         console.log("button clicked")
-        window.scrollTo({
+        document.body.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
@@ -25,8 +25,9 @@ const ScrollToTop = (props) => {
 
     useEffect(() => {
         console.log("useEffect added")
-        window.addEventListener('scroll', checkScroll, true)
-        return(window.removeEventListener('scroll', checkScroll))
+        document.body.addEventListener('scroll', checkScroll)
+
+        return() => document.body.removeEventListener('scroll', checkScroll)
     }, [])
 
 
@@ -41,13 +42,13 @@ const ScrollToTop = (props) => {
     return (
         <div className="arrowHolderDiv" >
             {showScroll ? <Fab 
-            className='scrollToTopArrowVisible' 
-            variant="extended" 
-            onClick={() => onClickHandler()} 
-            >
-                <NavigationIcon className={classes.extendedIcon}/>
-                Back To Top
-            </Fab> : <h1>Scroll</h1>}
+                className='scrollToTopArrowVisible'
+                variant="extended" 
+                onClick={onClickHandler} 
+                >
+                    <NavigationIcon className={classes.extendedIcon}/>
+                    Back To Top
+                </Fab> : ''}
         </div>
     )
 }

@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import Loading from './Loading';
+import ScrollToTop from './ScrollToTop';
 
 
 const Slideshow = () => {
@@ -86,6 +87,7 @@ const Slideshow = () => {
 
     return (
         <div className="slideshowSegment">
+            <ScrollToTop />
             <Container className="slideshow" >
                 <Fab id="rightArrow" onClick={() => { slideshowImageChanger(1) }} className="rightArrow"><span>&#10095;</span></Fab>
                     <img id="myimg" className="slideshowImg" />
