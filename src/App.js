@@ -42,7 +42,6 @@ const App = () => {
   
                 <Route component = {Error} />
               </Switch>
-              
           </div>
     </Router>
         
