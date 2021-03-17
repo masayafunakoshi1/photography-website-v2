@@ -2,7 +2,8 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import imgData from './images/EventsImgs' 
+import imgData from './images/WeddingsImgs' 
+import ScrollToTop from '../ScrollToTop'
 
 const Weddings = () => {
 
@@ -23,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
 
     return (
       <div className={classes.root}>
+      <ScrollToTop />
       <GridList cols={3}>
         {imgData.map((item) => (
           <GridListTile rows={item.featured ? 3.7 : 2.5} key={item.title}>
