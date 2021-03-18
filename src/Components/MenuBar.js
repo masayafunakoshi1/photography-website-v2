@@ -4,7 +4,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import {
     NavLink,
 } from "react-router-dom";
-import ScrollToTop from './ScrollToTop'
 
 
 const MenuBar = () => {
@@ -54,6 +53,11 @@ const MenuBar = () => {
                             <NavLink to ="/Nature">
                                 <MenuItem onClick={handleClose}>
                                     Nature
+                                </MenuItem>
+                            </NavLink>
+                            <NavLink to ="/Portraits">
+                                <MenuItem onClick={handleClose}>
+                                    Portraits
                                 </MenuItem>
                             </NavLink>
 
