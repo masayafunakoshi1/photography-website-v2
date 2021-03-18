@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import Container from '@material-ui/core/Container';
-import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import Loading from './Loading';
 import ScrollToTop from './ScrollToTop';
