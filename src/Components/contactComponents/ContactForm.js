@@ -5,7 +5,6 @@ import TextField from '@material-ui/core/TextField';
 import '../styles/Contact.css'
 
 import Button from '@material-ui/core/Button';
-import ScrollToTop from '../ScrollToTop';
 
 
 const ContactForm = (props) => {
@@ -31,8 +30,15 @@ const ContactForm = (props) => {
         .catch((error) => {
             console.error("Error writing document: ", error);
             props.errorAlertHandler()
-           
         });
+    }
+
+    const validationChecker = () => {
+        if(contactData.email !== "" && contactData.fullName !== "" && contactData.message !== "" && contactData.subject !== ""){
+            setValidation(false)
+        } else {
+            setValidation(true)
+        }
     }
  
     const handleSubmit = () => {
@@ -44,6 +50,7 @@ const ContactForm = (props) => {
             message: "",
             subject: ""
         });
+        setValidation(true)
     }
 
     //Styles
@@ -85,10 +92,9 @@ const ContactForm = (props) => {
 
     return (
         <div >
-                <div className="textFields">
+                <div className="textFields" onChange={validationChecker}>
                     <form noValidate autoComplete="off" className={classes.textFieldRoot} >
                             <TextField 
-                            error = {contactData.fullName === "" ? true : false}
                             type="text" 
                             id="standard-basic" 
                             label="Full-Name" 
@@ -98,7 +104,8 @@ const ContactForm = (props) => {
                                 setContactData(prevState => {
                                     return {...prevState, fullName: val}
                                 });
-                            }}/>
+                            }}
+                            />
                         <div>
                             <TextField 
                             type="text" 
@@ -110,7 +117,8 @@ const ContactForm = (props) => {
                                 setContactData(prevState => {
                                     return {...prevState, email: val}
                                  }); 
-                                }}/>
+                                }}
+                                />
                         </div>
                         <div>
                             <TextField 
@@ -123,7 +131,8 @@ const ContactForm = (props) => {
                                 setContactData(prevState => {
                                     return {...prevState, subject: val} 
                                 });
-                             }}/>
+                             }}                            
+                            />
                         </div>
                             <TextField
                             type="text"
@@ -143,6 +152,7 @@ const ContactForm = (props) => {
                             />
 
                             <Button 
+                            disabled = {validation}
                             variant="contained" 
                             color="primary" 
                             onClick={handleSubmit}

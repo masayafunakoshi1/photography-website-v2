@@ -12,7 +12,6 @@ import EmailIcon from '@material-ui/icons/Email';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import LinkedIn  from '@material-ui/icons/LinkedIn';
-import ScrollToTop from '../ScrollToTop';
 
 const Socials = () => {
 
