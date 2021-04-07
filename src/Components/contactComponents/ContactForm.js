@@ -66,8 +66,13 @@ const ContactForm = (props) => {
                 left: '200px',
             },
             [theme.breakpoints.down('sm')]: {
-                top: '0px',
-                left: '0px',
+                top: '70px',
+                left: '150px',
+                width: '300px'
+            },
+              [theme.breakpoints.down('xs')]: {
+                top: '50px',
+                left: '50px',
                 width: '350px'
             },
             },
@@ -78,8 +83,12 @@ const ContactForm = (props) => {
                 left: '105px',
                 },
             [theme.breakpoints.down('sm')]: {
-                left: '280px',
-                top: '0px',
+                left: '50px',
+                top: '310px',
+                },
+            [theme.breakpoints.down('xs')]: {
+                left: '320px',
+                top: '50px',
                 },
             },
         },
@@ -111,7 +120,6 @@ const ContactForm = (props) => {
                             type="text" 
                             id="standard-basic" 
                             label="Email" 
-                            value={contactData.email} 
                             onChange={e => {
                                 const val = e.target.value;
                                 setContactData(prevState => {

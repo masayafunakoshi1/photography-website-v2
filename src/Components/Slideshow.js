@@ -11,7 +11,6 @@ const Slideshow = () => {
 
     const docs = urlData.map(currentImg => {
         return currentImg.imageUrl;
-        // return process.env.PUBLIC_URL + currentImg.imageUrl
     })
 
      const showSlides = () => {
@@ -41,7 +40,7 @@ const Slideshow = () => {
         setTimeout(() => {
                 img.classList.remove("Visible")
                 console.log("class removed")
-            }, 4500); //Removes visibility every 4.5 seconds taking the remaining 1.5 seconds to transition (img to white, white to next img)
+            }, 4000); //Removes visibility every 4 seconds taking the remaining 1.5 seconds to transition (img to white, white to next img)
     }
 
     ///Hides arrows until image is loaded
@@ -70,7 +69,7 @@ const Slideshow = () => {
     }, [isLoading])
 
 
-    // Automatic Slideshow (6 second timer, adds 1 to the slideIndex per 6 seconds)
+    // Automatic Slideshow (5.5 second timer, adds 1 to the slideIndex per 5.5 seconds)
     //Run it once on pageload to stop delay
     useEffect(() => {
         slideshowImageChanger(1);
@@ -80,7 +79,7 @@ const Slideshow = () => {
         const timer = setTimeout(() => {
             console.log("useEffect ran")
             slideshowImageChanger(1);
-        }, 6000);
+        }, 5500);
         return() => clearTimeout(timer)
     }, [showSlides])
 
