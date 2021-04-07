@@ -5,9 +5,9 @@ import NavigationIcon from '@material-ui/icons/Navigation';
 
 const ScrollToTop = (props) => {
     const [ showScroll, setShowScroll ] = useState(false);
+    
 
     const checkScroll = () => {
-        console.log(document.body.scrollTop)
         if(!showScroll && document.body.scrollTop > 500){
             setShowScroll(true)
         } else if (document.body.scrollTop <= 500){

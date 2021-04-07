@@ -38,6 +38,7 @@ const MenuBar = () => {
                             anchorEl={anchorEl}
                             keepMounted
                             open={Boolean(anchorEl)}
+                            onClose={handleClose}
                         >
 
                             <NavLink to ="/Weddings">
