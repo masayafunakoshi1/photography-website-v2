@@ -1,13 +1,16 @@
 import React from 'react'
 import './styles/FreqAskQuestions.css'
 import { makeStyles } from '@material-ui/core/styles';
+import {
+    Accordion,
+    AccordionSummary,
+    AccordionDetails,
+    Typography,
+    Container
+} from '@material-ui/core'
 
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Container from '@material-ui/core/Container';
+
 
 const FreqAskQuestions = () => {
 
@@ -38,8 +41,7 @@ const FreqAskQuestions = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                            I am located in the New York Metropolitan area. 
-                            <br/>&emsp;&emsp;&emsp;Though more than willing to shoot anywhere, but will have to discuss travel details with the client.
+                            I am located in the New York Metropolitan area. Though more than willing to shoot anywhere, but will have to discuss travel details with the client.
                     </Typography>
                     <img></img>
                     </AccordionDetails>
@@ -53,9 +55,7 @@ const FreqAskQuestions = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                            Depends entirely on the type of shoot. 
-                            <br />&emsp;&emsp;&emsp;Please go to the Contact page and send me a message, we can then discuss rates and find what works for both 
-                            <br/>&emsp;&emsp;&emsp;of us.
+                            Depends entirely on the type of shoot. Please go to the Contact page and send me a message, we can then discuss rates and find what works for both of us.
                     </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -82,7 +82,7 @@ const FreqAskQuestions = () => {
                     <AccordionDetails>
                     <Typography>
                         I normally shoot with a Canon 760D, mainly using an 85mm Prime and 24mm Prime lens. 
-                        <br/>&emsp;&emsp;&emsp;I am looking to upgrade my gear soon to something more powerful, but this gets the job done!
+                        I am looking to upgrade my gear soon to something more powerful, but this gets the job done!
                     </Typography>
                     </AccordionDetails>
                 </Accordion>
