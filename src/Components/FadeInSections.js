@@ -12,12 +12,12 @@ const FadeInSections = (props) => {
     }, []);
 
     return (
-        <div 
+        <section 
         className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
         ref={domRef}
         >
             {props.children}
-        </div>
+        </section>
     )
 }
 

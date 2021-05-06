@@ -11,6 +11,12 @@ import Contact from './Components/Contact'
 import FreqAskQuestions from "./Components/FreqAskQuestions";
 import About from './Components/About'
 
+import Weddings from './Components/galleries/Weddings'
+import Events from './Components/galleries/Events'
+import Nature from './Components/galleries/Nature'
+import Portraits from "./Components/galleries/Portraits";
+
+
 
 
 const App = () => {
@@ -19,13 +25,19 @@ const App = () => {
   return (
     <Router>
         <div className="App">
+        
             {/* <FadeOutMenu> */}
               <MenuBar />
             {/* </FadeOutMenu> */}
-
               <Switch>
                 <Route exact path="/" component = {Home} />
-                
+
+                <Route path="/Weddings" component = {Weddings}></Route>
+                <Route path="/Events" component = {Events}></Route>
+                <Route path="/Nature" component = {Nature}></Route>
+                <Route path="/Portraits" component = {Portraits}></Route>
+
+
                 <Route path="/Contact" component = {Contact}></Route>
                 <Route path="/FreqAskQuestions" component = {FreqAskQuestions}></Route>
                 <Route path="/About" component = {About}></Route>

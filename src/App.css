@@ -1,16 +1,23 @@
 html,
 body {
   width: 100%;
-  height: 100vh;
   margin: 0px 0px 0px 0px;
   padding: 0px;
-  overflow-x: hidden;
 }
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&display=swap");
 
 /* overall page*/
+
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
 
 .App {
   display: flex;
@@ -36,7 +43,7 @@ body {
   transition: 0.4s;
 
   position: fixed;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 1000;
   background: #f7b8c1; /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
@@ -256,6 +263,7 @@ a:hover {
   visibility: hidden;
   transition: opacity 0.6s ease-out, transform 1.2s ease-out;
   will-change: opacity, visibility;
+  user-select: none;
 }
 .fade-in-section.is-visible {
   opacity: 1;
@@ -263,7 +271,23 @@ a:hover {
   visibility: visible;
 }
 
-/*/////////////////////////////////////////// Different Screen Sizes ////////////////////////////////////////////////////*/
+.arrowHolderDiv {
+  position: fixed;
+  left: 45%;
+  top: 90%;
+  z-index: 99;
+}
+
+.scrollToTopArrowVisible {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.scrollToTopArrowVisible:hover {
+  opacity: 1;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Different Screen Sizes ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* Laptops */
 @media only screen and (max-width: 1600px) {

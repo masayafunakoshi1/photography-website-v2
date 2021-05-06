@@ -7,10 +7,8 @@
 html,
 body {
   max-width: 100%;
-  height: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: visible;
 
   align-items: center;
   align-content: center;
@@ -62,7 +60,7 @@ body {
   position: relative;
   left: 55%;
   bottom: 270px;
-  max-width: 380px;
+  max-width: 390px;
 }
 
 .contactIcons {
@@ -142,7 +140,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1290px) {
   .textFields {
     margin-right: 100px;
     margin-bottom: 100px;
@@ -152,7 +150,28 @@ body {
   .contacts {
     flex: 50%;
     flex-direction: column;
+    top: 80px;
+    left: 40%;
+  }
+
+  .socials {
+    width: 400px;
     top: 50px;
+    left: 40%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .textFields {
+    margin-right: 100px;
+    margin-bottom: 100px;
+    max-width: 450px;
+  }
+
+  .contacts {
+    flex: 50%;
+    flex-direction: column;
+    top: 80px;
     left: 40%;
   }
 
@@ -172,7 +191,7 @@ body {
   .contacts {
     flex: 50%;
     flex-direction: column;
-    top: 20px;
+    top: 50px;
     left: 40%;
   }
 

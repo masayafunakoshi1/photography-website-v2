@@ -38,12 +38,30 @@ const MenuBar = () => {
                             anchorEl={anchorEl}
                             keepMounted
                             open={Boolean(anchorEl)}
-                            
+                            onClose={handleClose}
                         >
 
-                            <MenuItem onClick={handleClose}>Weddings</MenuItem>
-                            <MenuItem onClick={handleClose}>Events</MenuItem>
-                            <MenuItem onClick={handleClose}>Nature</MenuItem>
+                            <NavLink to ="/Weddings">
+                                <MenuItem onClick={handleClose}>
+                                    Weddings
+                                </MenuItem>
+                            </NavLink>
+                            <NavLink to ="/Events">
+                                <MenuItem onClick={handleClose}>
+                                    Events
+                                </MenuItem>
+                            </NavLink>
+                            <NavLink to ="/Nature">
+                                <MenuItem onClick={handleClose}>
+                                    Nature
+                                </MenuItem>
+                            </NavLink>
+                            <NavLink to ="/Portraits">
+                                <MenuItem onClick={handleClose}>
+                                    Portraits
+                                </MenuItem>
+                            </NavLink>
+
                         </Menu>
                     </li>
                     <li><NavLink to="/About">About</NavLink></li>
