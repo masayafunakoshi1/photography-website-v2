@@ -5,8 +5,6 @@ import GridImagesEvents from "./gridImages/GridImagesEvents"
 import GridImagesPersonal from "./gridImages/GridImagesPersonal"
 
 
-
-
 const Home = () => {
   const [openImage, setOpenImage] = useState(0);
 
@@ -19,6 +17,14 @@ const Home = () => {
   const handleClose = () => {
       setOpenImage(0);
   };
+  
+  //Disables right click on imgs
+    const nocontext = (e) => {
+      let clickedTag = (e===null) ? e.srcElement.tagName : e.target.tagName;
+      if (clickedTag === "IMG")
+        return false;
+    }
+    document.oncontextmenu = nocontext;
 
 
   //JSX

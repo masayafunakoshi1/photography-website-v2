@@ -32,13 +32,8 @@ export default [
         {
         title: 'SuzukiFam2',
         description: '',
-        imageUrl: 'images/miscImgs/IMG_3966-min.jpg',
-    },
-    {
-        title: 'FontaineCouple',
-        description: '',
         featured: true,
-        imageUrl: 'images/miscImgs/IMG_4111(WhiteBackground)-min.jpg',
+        imageUrl: 'images/miscImgs/IMG_3966-min.jpg',
     },
         {
         title: 'FontaineCouple2',
@@ -72,6 +67,11 @@ export default [
         imageUrl: 'images/miscImgs/IMG_6885(shadowsremoved)-3-min.jpg',
     },
         {
+        title: 'FontaineCouple',
+        description: '',
+        imageUrl: 'images/miscImgs/IMG_4111(WhiteBackground)-min.jpg',
+    },
+        {
         title: 'FunakoshiCouple5',
         description: '',
         imageUrl: 'images/miscImgs/IMG_4218-min.jpg',
@@ -93,6 +93,17 @@ export default [
         imageUrl: 'images/miscImgs/IMG_6852-min.jpg',
     },
             {
+        title: 'KatoCouple2',
+        description: '',
+        imageUrl: 'images/miscImgs/IMG_6962-min.jpg',
+    },
+            {
+        title: 'KoseiLinkedIn3',
+        description: '',
+        imageUrl: 'images/miscImgs/IMG_7007-min.jpg',
+    },
+
+     {
         title: 'Holt',
         description: '',
         featured: true,
@@ -103,16 +114,6 @@ export default [
         description: '',
         featured: true,
         imageUrl: 'images/miscImgs/IMG_6949(Final1)-min.jpg',
-    },
-            {
-        title: 'KatoCouple2',
-        description: '',
-        imageUrl: 'images/miscImgs/IMG_6962-min.jpg',
-    },
-            {
-        title: 'KoseiLinkedIn3',
-        description: '',
-        imageUrl: 'images/miscImgs/IMG_7007-min.jpg',
     },
             {
         title: 'KoseiLinkedIn4',

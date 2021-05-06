@@ -36,10 +36,8 @@ const Slideshow = () => {
     const imageFadeIn = () => {
         let img = document.getElementById("myimg");
         img.classList.add('Visible')
-        console.log("class added")
         setTimeout(() => {
                 img.classList.remove("Visible")
-                console.log("class removed")
             }, 4000); //Removes visibility every 4 seconds taking the remaining 1.5 seconds to transition (img to white, white to next img)
     }
 
@@ -77,7 +75,6 @@ const Slideshow = () => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            console.log("useEffect ran")
             slideshowImageChanger(1);
         }, 5500);
         return() => clearTimeout(timer)
