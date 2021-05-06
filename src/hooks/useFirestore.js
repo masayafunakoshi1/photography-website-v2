@@ -12,7 +12,6 @@ const useFirestore = (collection) => {
             .onSnapshot((snap) => {
                 //Array of documents will have both the data and id associated with each
                 let documents = [];
-                console.log(snap)
                 //Cycles through the documents within the database collection at the time, when we get Snapshot
                 snap.forEach(doc => {
                     documents.push({ ...doc.data(), id: doc.id })

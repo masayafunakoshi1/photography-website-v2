@@ -9,28 +9,36 @@ import Button from '@material-ui/core/Button';
 
 const ContactForm = (props) => {
     
-const [contactData, setContactData] = useState({
+    const [contactData, setContactData] = useState({
         email: "",
         fullName: "",
         message: "",
         subject: ""
     })
+    const [validation, setValidation] = useState(true)
 
 //Submit contact information to Firestore API
     const submitToFirestore = () => {
-        // Add a new document in collection "cities"
+        // Add a new document in collection "contactPageData"
         projectFirestore.collection("contactPageData").add({
             contactData
         })
         .then(() => {
             console.log("Document successfully written!");
-             props.successAlertHandler();
+            props.successAlertHandler();
         })
         .catch((error) => {
             console.error("Error writing document: ", error);
-                props.errorAlertHandler()
-           
+            props.errorAlertHandler()
         });
+    }
+
+    const validationChecker = () => {
+        if(contactData.email !== "" && contactData.fullName !== "" && contactData.message !== "" && contactData.subject !== ""){
+            setValidation(false)
+        } else {
+            setValidation(true)
+        }
     }
  
     const handleSubmit = () => {
@@ -42,6 +50,7 @@ const [contactData, setContactData] = useState({
             message: "",
             subject: ""
         });
+        setValidation(true)
     }
 
     //Styles
@@ -57,8 +66,13 @@ const [contactData, setContactData] = useState({
                 left: '200px',
             },
             [theme.breakpoints.down('sm')]: {
-                top: '0px',
-                left: '0px',
+                top: '70px',
+                left: '150px',
+                width: '300px'
+            },
+              [theme.breakpoints.down('xs')]: {
+                top: '50px',
+                left: '50px',
                 width: '350px'
             },
             },
@@ -69,8 +83,12 @@ const [contactData, setContactData] = useState({
                 left: '105px',
                 },
             [theme.breakpoints.down('sm')]: {
-                left: '280px',
-                top: '0px',
+                left: '50px',
+                top: '310px',
+                },
+            [theme.breakpoints.down('xs')]: {
+                left: '320px',
+                top: '50px',
                 },
             },
         },
@@ -83,29 +101,46 @@ const [contactData, setContactData] = useState({
 
     return (
         <div >
-                <div className="textFields">
+                <div className="textFields" onChange={validationChecker}>
                     <form noValidate autoComplete="off" className={classes.textFieldRoot} >
-                            <TextField type="text" id="standard-basic" label="Full-Name" value={contactData.fullName} onChange={e => {
+                            <TextField 
+                            type="text" 
+                            id="standard-basic" 
+                            label="Full-Name" 
+                            value={contactData.fullName} 
+                            onChange={e => {
                                 const val = e.target.value;
                                 setContactData(prevState => {
                                     return {...prevState, fullName: val}
                                 });
-                            }}/>
+                            }}
+                            />
                         <div>
-                            <TextField type="text" id="standard-basic" label="Email" value={contactData.email} onChange={e => {
+                            <TextField 
+                            type="text" 
+                            id="standard-basic" 
+                            label="Email" 
+                            onChange={e => {
                                 const val = e.target.value;
                                 setContactData(prevState => {
                                     return {...prevState, email: val}
                                  }); 
-                                }}/>
+                                }}
+                                />
                         </div>
                         <div>
-                            <TextField type="text" id="standard-basic" label="Subject" value={contactData.subject} onChange={e => {
+                            <TextField 
+                            type="text" 
+                            id="standard-basic" 
+                            label="Subject" 
+                            value={contactData.subject} 
+                            onChange={e => {
                                 const val = e.target.value;
                                 setContactData(prevState => {
                                     return {...prevState, subject: val} 
                                 });
-                             }}/>
+                             }}                            
+                            />
                         </div>
                             <TextField
                             type="text"
@@ -125,6 +160,7 @@ const [contactData, setContactData] = useState({
                             />
 
                             <Button 
+                            disabled = {validation}
                             variant="contained" 
                             color="primary" 
                             onClick={handleSubmit}
