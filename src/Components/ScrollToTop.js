@@ -24,7 +24,6 @@ const ScrollToTop = (props) => {
     };
 
     useEffect(() => {
-        console.log("useEffect added")
         document.body.addEventListener('scroll', checkScroll)
 
         return() => document.body.removeEventListener('scroll', checkScroll)
