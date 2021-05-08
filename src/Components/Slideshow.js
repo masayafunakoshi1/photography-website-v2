@@ -16,7 +16,6 @@ const Slideshow = () => {
     //Show slides by connecting img src = "" to docs[slideIndex]
      const showSlides = () => {
         document.getElementById('myimg').src = docs[slideIndex] ;
-        console.log("show slides")
         imageFadeIn();
         setIsLoading(false);
      }
@@ -77,7 +76,6 @@ const Slideshow = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             slideshowImageChanger(1);
-            console.log("slideshowimagechanger")
         }, 5500);
         return() => clearTimeout(timer)
     }, [showSlides])
