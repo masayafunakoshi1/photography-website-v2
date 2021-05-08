@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
         top: "4%",
             [theme.breakpoints.down('lg')]: {
             width: 'auto',
-            height: 750,
+            height: 850,
             },
             [theme.breakpoints.down('md')]: {
                 width: 'auto',
@@ -99,7 +99,7 @@ const GridListComp = ({imgData}) => {
         <GridList cols={3}>
             {imgData.map((item) => (
             <GridListTile 
-                rows={item.featured ? 4 : 2.5} 
+                rows={item.featured ? 4.5 : 2.5} 
                 key={item.title}
                 className="galleryImg"
                 >
