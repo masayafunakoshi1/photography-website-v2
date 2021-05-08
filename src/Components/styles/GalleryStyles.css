@@ -19,7 +19,7 @@ img {
 }
 
 .smooth-image {
-  transition: opacity 3s;
+  transition: opacity 2s;
 }
 
 .image-visible {
