@@ -153,6 +153,7 @@ export default [
             {
             title: 'PakiWeddingPhotos11',
             description: '',
+            featured: true,
             imageUrl: 'images/weddingImgs/IMG_7221-min.jpg',
         },    
             {

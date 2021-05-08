@@ -13,8 +13,10 @@ const Slideshow = () => {
         return currentImg.imageUrl;
     })
 
+    //Show slides by connecting img src = "" to docs[slideIndex]
      const showSlides = () => {
         document.getElementById('myimg').src = docs[slideIndex] ;
+        console.log("show slides")
         imageFadeIn();
         setIsLoading(false);
      }
@@ -41,8 +43,7 @@ const Slideshow = () => {
             }, 4000); //Removes visibility every 4 seconds taking the remaining 1.5 seconds to transition (img to white, white to next img)
     }
 
-    ///Hides arrows until image is loaded
-
+    ///Hides arrows until image is loaded (normally only if webpage loads imgs slowly)
     const rightArrowFadeIn = () => {
         let rightArrow = document.getElementById("rightArrow");
         if(isLoading){
@@ -61,7 +62,7 @@ const Slideshow = () => {
         }
     }
 
-        useEffect(() => {
+    useEffect(() => {
         rightArrowFadeIn();
         leftArrowFadeIn();
     }, [isLoading])
@@ -76,6 +77,7 @@ const Slideshow = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             slideshowImageChanger(1);
+            console.log("slideshowimagechanger")
         }, 5500);
         return() => clearTimeout(timer)
     }, [showSlides])
