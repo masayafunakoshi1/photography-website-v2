@@ -37,6 +37,12 @@ const useStyles = makeStyles((theme) => ({
                 left: '12%',
                 top: "5%",
             },
+            [theme.breakpoints.down('xs')]: {
+                maxWidth: 360,
+                height: 'auto',
+                left: '7%',
+                top: "30%",
+            },
     },
     modalStylePortrait:{
         position: 'absolute',
@@ -61,6 +67,12 @@ const useStyles = makeStyles((theme) => ({
                 maxHeight: 550,
                 left: '25%',
                 top: "5%",
+            },
+            [theme.breakpoints.down('xs')]: {
+                width: 'auto',
+                maxHeight: 480,
+                left: '13%',
+                top: "10%",
             },
     }
 }));
