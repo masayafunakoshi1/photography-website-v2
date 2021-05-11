@@ -434,7 +434,7 @@ a:hover {
   }
   /*SlideShow*/
   #myimg {
-    max-width: 600px;
+    max-width: 700px;
     height: auto;
     flex: 100%;
     z-index: 1;
@@ -442,16 +442,16 @@ a:hover {
   }
 
   .rightArrow {
-    left: 1015px;
-    top: -290px;
+    left: 940px;
+    top: -250px;
     font-size: 30pt;
   }
 
   .leftArrow {
     text-align: center;
     position: relative;
-    bottom: 290px;
-    left: -865px;
+    bottom: 255px;
+    left: -800px;
   }
 
   .quote {
@@ -461,8 +461,8 @@ a:hover {
     font-family: "Times New Roman", Times, serif;
     z-index: 3;
 
-    bottom: 400px;
-    right: 130px;
+    bottom: 470px;
+    right: 350px;
   }
 
   .quote > span {
@@ -487,7 +487,7 @@ a:hover {
 
   /* Page Segmentation */
   .slideshowSegment {
-    height: 700px;
+    height: 600px;
     width: 100vw;
   }
 
