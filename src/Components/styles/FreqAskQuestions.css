@@ -32,3 +32,18 @@ body {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
+
+@media only Screen and (max-width: 600px) {
+  .faq-Title {
+    font-size: 35pt;
+    /* text-decoration: underline 4px solid rgb(255, 227, 232); */
+    text-align: center;
+    margin-bottom: 40px;
+
+    background-image: linear-gradient(to top, #f8dfdf, #f77588);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}

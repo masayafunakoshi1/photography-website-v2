@@ -1,11 +1,25 @@
 import React, {useState, useEffect} from 'react'
 import Container from '@material-ui/core/Container';
+import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import Loading from './Loading';
 import ScrollToTop from './ScrollToTop';
 
 
+const useStyles = makeStyles((theme) => ({
+
+  fabContainer: {
+      [theme.breakpoints.down('sm')]: {
+        size: 'small',
+        width: '20px',
+        height: '30px',
+    },
+  }
+}));
+
+
 const Slideshow = () => {
+    const classes = useStyles();
     const [slideIndex, setSlideIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -84,10 +98,10 @@ const Slideshow = () => {
         <div className="slideshowSegment">
             <ScrollToTop />
             <Container className="slideshow" >
-                <Fab id="rightArrow" onClick={() => { slideshowImageChanger(1) }} className="rightArrow"><span>&#10095;</span></Fab>
+                <Fab id="rightArrow" onClick={() => { slideshowImageChanger(1) }} className={`${classes.fabContainer} rightArrow`}><span>&#10095;</span></Fab>
                     <img id="myimg" className="slideshowImg" />
                     {isLoading && <Loading />}
-                <Fab id="leftArrow" onClick={() => { slideshowImageChanger(-1) }} className="leftArrow"><span>&#10094;</span></Fab>
+                <Fab id="leftArrow" onClick={() => { slideshowImageChanger(-1) }} className={`${classes.fabContainer} leftArrow`}><span>&#10094;</span></Fab>
             </Container>
 
             <Container className="quote">
@@ -130,7 +144,7 @@ const urlData = [
     {
         title: 'Paki-Wedding-Photo',
         description: 'A newly-wed couple taking wedding photos on the beautiful Belvedere property.',
-        imageUrl: 'images/slideshowImgs/IMG_7114.jpg',
+        imageUrl: 'images/slideshowImgs/IMG_7280.jpg',
     },
     {
         title: 'Kevin-Patricia-AisleWalk',

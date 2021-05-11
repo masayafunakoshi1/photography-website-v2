@@ -19,10 +19,19 @@ const FreqAskQuestions = () => {
     const useStyles = makeStyles((theme) => ({
         root: {
             maxWidth: '50%',
+ 
+            [theme.breakpoints.down('sm')]:{
+                maxWidth: '85%'
+            }
         },
         heading: {
             fontSize: theme.typography.pxToRem(20),
             fontWeight: theme.typography.fontWeightMedium,
+
+            [theme.breakpoints.down('sm')]:{
+                fontSize: theme.typography.pxToRem(18),
+                fontWeight: theme.typography.fontWeightLight,
+            },
         },
     }));
 

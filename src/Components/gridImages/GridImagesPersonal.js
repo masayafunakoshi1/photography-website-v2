@@ -1,4 +1,4 @@
-import React from 'react'
+ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import useFirestore from '../../hooks/useFirestore'
@@ -35,6 +35,14 @@ const GridImagesPersonal = ({openImage, handleOpen, handleClose}) => {
                 width: 550,
                 height: 'auto',           
              },
+             [theme.breakpoints.down('sm')]: {
+                width: 360,
+                height: 'auto',
+             },
+            [theme.breakpoints.down('xs')]: {
+                width: 270,
+                height: 'auto',
+             },
         },
 
         //Modal Styles
@@ -43,8 +51,8 @@ const GridImagesPersonal = ({openImage, handleOpen, handleClose}) => {
             maxWidth: '1300px',
             transition: ".5s",
             boxShadow: theme.shadows[7],
-            left: '15%',
-            top: "5%",
+            left: '17%',
+            top: "10%",
                 [theme.breakpoints.down('lg')]: {
                 width: 1000,
                 height: 'auto',
@@ -54,6 +62,18 @@ const GridImagesPersonal = ({openImage, handleOpen, handleClose}) => {
                     height: 'auto',
                     left: '10%',
                     top: "5%",
+                },
+                [theme.breakpoints.down('sm')]: {
+                    maxWidth: 600,
+                    height: 'auto',
+                    left: '20%',
+                    top: "10%",
+                },
+               [theme.breakpoints.down('xs')]: {
+                    maxWidth: 360,
+                    height: 'auto',
+                    left: '5%',
+                    top: "30%",
                 },
         },  
     }

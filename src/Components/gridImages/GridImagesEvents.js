@@ -35,9 +35,13 @@ const GridImagesEvents = ({openImage, handleOpen, handleClose}) => {
             height: 'auto',
             },
             [theme.breakpoints.down('sm')]: {
-            width: 900,
-            height: 'auto',
-            },
+                width: 360,
+                height: 'auto',
+             },
+            [theme.breakpoints.down('xs')]: {
+                width: 270,
+                height: 'auto',
+             },
         },
 
         //Modal Styles
@@ -46,8 +50,8 @@ const GridImagesEvents = ({openImage, handleOpen, handleClose}) => {
             maxWidth: '1300px',
             transition: ".5s",
             boxShadow: theme.shadows[7],
-            left: '15%',
-            top: "5%",
+            left: '17%',
+            top: "10%",
                 [theme.breakpoints.down('lg')]: {
                 width: 1000,
                 height: 'auto',
@@ -57,6 +61,18 @@ const GridImagesEvents = ({openImage, handleOpen, handleClose}) => {
                     height: 'auto',
                     left: '10%',
                     top: "5%",
+                },
+                [theme.breakpoints.down('sm')]: {
+                    maxWidth: 600,
+                    height: 'auto',
+                    left: '20%',
+                    top: "10%",
+                },
+               [theme.breakpoints.down('xs')]: {
+                    maxWidth: 360,
+                    height: 'auto',
+                    left: '5%',
+                    top: "30%",
                 },
         },  
     })
