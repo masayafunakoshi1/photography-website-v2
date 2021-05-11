@@ -19,10 +19,19 @@ const FreqAskQuestions = () => {
     const useStyles = makeStyles((theme) => ({
         root: {
             maxWidth: '50%',
+ 
+            [theme.breakpoints.down('sm')]:{
+                maxWidth: '85%'
+            }
         },
         heading: {
             fontSize: theme.typography.pxToRem(20),
             fontWeight: theme.typography.fontWeightMedium,
+
+            [theme.breakpoints.down('sm')]:{
+                fontSize: theme.typography.pxToRem(18),
+                fontWeight: theme.typography.fontWeightLight,
+            },
         },
     }));
 
@@ -41,7 +50,7 @@ const FreqAskQuestions = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                            I am located in the New York Metropolitan area. Though more than willing to shoot anywhere, but will have to discuss travel details with the client.
+                            I am located in the New York Metropolitan area. Though more than willing to shoot anywhere, but will have to <br/>&emsp;&emsp;&emsp;discuss travel details with the client.
                     </Typography>
                     <img></img>
                     </AccordionDetails>
@@ -55,7 +64,7 @@ const FreqAskQuestions = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                            Depends entirely on the type of shoot. Please go to the Contact page and send me a message, we can then discuss rates and find what works for both of us.
+                            Depends entirely on the type of shoot. Please go to the Contact page and send me a message, we can then <br/>&emsp;&emsp;&emsp;discuss rates and find what works for both of us.
                     </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -68,7 +77,7 @@ const FreqAskQuestions = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                    Go to the Contact page and feel free to send me a message!
+                     <br/>&emsp;&emsp;&emsp;Go to the Contact page and feel free to send me a message!
                     </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -82,7 +91,7 @@ const FreqAskQuestions = () => {
                     <AccordionDetails>
                     <Typography>
                         I normally shoot with a Canon 760D, mainly using an 85mm Prime and 24mm Prime lens. 
-                        I am looking to upgrade my gear soon to something more powerful, but this gets the job done!
+                        <br/>&emsp;&emsp;&emsp;I am looking to upgrade my gear soon to something more powerful, but this gets the job done!
                     </Typography>
                     </AccordionDetails>
                 </Accordion>

@@ -60,11 +60,6 @@ export default [
         imageUrl: 'images/eventsImgs/IMG_5234-min.jpg',
     },
         {
-        title: 'BirthdayParty2',
-        description: '',
-        imageUrl: 'images/eventsImgs/IMG_5714-min.jpg',
-    },
-        {
         title: 'BirthdayParty3',
         description: '',
         imageUrl: 'images/eventsImgs/IMG_5821-min.jpg',
