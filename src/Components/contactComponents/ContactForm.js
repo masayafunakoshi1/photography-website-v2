@@ -67,13 +67,13 @@ const ContactForm = (props) => {
             },
             [theme.breakpoints.down('sm')]: {
                 top: '70px',
-                left: '150px',
+                left: '100px',
                 width: '300px'
             },
               [theme.breakpoints.down('xs')]: {
                 top: '50px',
-                left: '50px',
-                width: '350px'
+                left: '0px',
+                width: '95%'
             },
             },
             '& > *': {
@@ -87,9 +87,10 @@ const ContactForm = (props) => {
                 top: '310px',
                 },
             [theme.breakpoints.down('xs')]: {
-                left: '320px',
+                left: '75%',
                 top: '50px',
                 },
+
             },
         },
         typography: {

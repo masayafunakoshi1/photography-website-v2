@@ -33,23 +33,6 @@ img {
 
 /* top menu bar*/
 
-/* Top menu bar shrink or grow*/
-
-/* Attempting to make it become smaller as you scroll down from top */
-.menu.active {
-  width: auto;
-  height: 80px;
-  top: 0;
-  transition: 0.4s;
-
-  position: fixed;
-  /* overflow: hidden; */
-  z-index: 1000;
-  background: #f7b8c1; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
-  background: linear-gradient(to top, #ffffff, #f7b8c1);
-}
-
 .menu {
   max-width: 100%;
   height: 240px;
@@ -99,6 +82,7 @@ a:hover {
 }
 
 /* Page Segmentation */
+
 .slideshowSegment {
   height: 1100px;
   width: 100vw;
@@ -287,7 +271,7 @@ a:hover {
   opacity: 1;
 }
 
-/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Different Screen Sizes ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Different Screen Sizes ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* Laptops */
 @media only screen and (max-width: 1600px) {
@@ -418,8 +402,8 @@ a:hover {
   }
 }
 
-/*///////////////////////////////////////////////////////// Tablets //////////////////////////////////////////////////////////*/
-@media only Screen and (max-width: 1280px) {
+/*/////////////////////////////////// Tablets /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only Screen and (max-width: 1315px) {
   /* top menu bar*/
   .menu {
     max-width: 100%;
@@ -436,7 +420,7 @@ a:hover {
   }
 
   .title {
-    padding-right: 380px;
+    padding-right: 50px;
     color: #808080;
     font-size: 4.5em;
     line-height: 70px;
@@ -444,12 +428,13 @@ a:hover {
 
   .menu-items > li {
     font-family: "Times New Roman", Times, serif;
-    margin-right: 80px;
+    display: flex;
+    flex-direction: column;
     font-size: 15pt;
   }
   /*SlideShow*/
   #myimg {
-    max-width: 800px;
+    max-width: 600px;
     height: auto;
     flex: 100%;
     z-index: 1;
@@ -476,8 +461,8 @@ a:hover {
     font-family: "Times New Roman", Times, serif;
     z-index: 3;
 
-    bottom: 200px;
-    right: 100px;
+    bottom: 400px;
+    right: 130px;
   }
 
   .quote > span {
@@ -508,7 +493,6 @@ a:hover {
 
   .firstSegment {
     width: 100%;
-    display: flex;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -522,7 +506,6 @@ a:hover {
   .secondSegment {
     margin-top: 150px;
     width: 100%;
-    display: flex;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -536,7 +519,6 @@ a:hover {
   .thirdSegment {
     margin-top: 150px;
     width: 100%;
-    display: flex;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -569,39 +551,54 @@ a:hover {
     background: linear-gradient(to top, #ffffff, #f7b8c1);
   }
 
-  .title {
-    color: #808080;
-    font-size: 4em;
-    line-height: 60px;
+  .menu-items > li {
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    flex-direction: column;
+    font-size: 10pt;
   }
 
-  .menu-items > li {
-    display: inline;
-    font-size: small;
+  .title {
+    color: #808080;
+    font-size: 3em;
+    padding-right: 10%;
+    line-height: 60px;
   }
 
   /*SlideShow*/
   #myimg {
-    max-width: 800px;
+    max-width: 320px;
     height: auto;
     flex: 100%;
     z-index: 1;
     border-radius: 5%;
+    margin-left: 0px;
   }
 
   .rightArrow {
     text-align: center;
     position: relative;
-    left: 880px;
-    top: -250px;
-    font-size: 30pt;
+    left: 360px;
+    top: -90px;
+    opacity: 1;
   }
 
   .leftArrow {
     text-align: center;
     position: relative;
-    bottom: 250px;
-    right: 880px;
+    left: -350px;
+    bottom: 93px;
+    opacity: 1;
+  }
+
+  .rightArrow > span {
+    color: white;
+    font-size: 20px;
+  }
+
+  .leftArrow > span {
+    color: white;
+    font-size: 20px;
   }
 
   .quote {
@@ -610,10 +607,8 @@ a:hover {
     font-size: 20pt;
     font-family: "Times New Roman", Times, serif;
     z-index: 3;
-
-    position: relative;
-    bottom: 200px;
-    right: 100px;
+    left: 40px;
+    bottom: 900px;
   }
 
   .quote > span {
@@ -626,7 +621,7 @@ a:hover {
   .sectionTitles {
     max-height: 200px;
     max-width: 800px;
-
+    display: flex;
     background-color: pink;
     background-image: linear-gradient(to top, #f8dfdf, #f77588);
     background-size: 100%;
@@ -635,18 +630,19 @@ a:hover {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 
-    font-size: 8em;
+    font-size: 4em;
     text-align: center;
   }
 
   /* Page Segmentation */
   .slideshowSegment {
-    height: 700px;
+    height: 400px;
     width: 100vw;
   }
 
   .firstSegment {
     width: 100%;
+    flex-direction: column;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -660,6 +656,7 @@ a:hover {
   .secondSegment {
     margin-top: 150px;
     width: 100%;
+    flex-direction: column;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -673,6 +670,7 @@ a:hover {
   .thirdSegment {
     margin-top: 150px;
     width: 100%;
+    flex-direction: column;
 
     background: #f7b8c1; /* fallback for old browsers */
     background: linear-gradient(
@@ -681,5 +679,12 @@ a:hover {
       rgb(255, 189, 198) 80%,
       rgba(255, 255, 255) 100%
     );
+  }
+
+  .arrowHolderDiv {
+    position: fixed;
+    left: 35%;
+    top: 85%;
+    z-index: 99;
   }
 }
