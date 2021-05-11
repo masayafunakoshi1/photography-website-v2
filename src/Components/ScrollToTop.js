@@ -16,7 +16,6 @@ const ScrollToTop = (props) => {
     }
 
     const onClickHandler = () => {
-        console.log("button clicked")
         document.body.scrollTo({
             top: 0,
             behavior: 'smooth'

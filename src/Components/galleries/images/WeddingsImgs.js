@@ -5,11 +5,6 @@ export default [
             imageUrl: 'images/slideshowImgs/IMG_6669.jpg',
         },
         {
-            title: 'Paki-Wedding-Photo',
-            description: 'A newly-wed couple taking wedding photos on the beautiful Belvedere property.',
-            imageUrl: 'images/slideshowImgs/IMG_7114.jpg',
-        },
-        {
             title: 'Johanna&Kushal1',
             description: '',
             featured: true,
@@ -153,6 +148,7 @@ export default [
             {
             title: 'PakiWeddingPhotos11',
             description: '',
+            featured: true,
             imageUrl: 'images/weddingImgs/IMG_7221-min.jpg',
         },    
             {

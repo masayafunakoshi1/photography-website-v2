@@ -183,6 +183,24 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
+  .contact-Title {
+    font-size: 45pt;
+    /* text-decoration: underline 4px solid rgb(255, 227, 232); */
+    text-align: center;
+
+    background-image: linear-gradient(to top, #f8dfdf, #f77588);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+
+  .contact-Subtext {
+    text-align: center;
+    font-size: 12pt;
+    color: #5e5c5c;
+  }
+
   .textFields {
     flex: 0 0 100%;
     margin-bottom: 20px;
@@ -192,6 +210,27 @@ body {
     flex: 50%;
     flex-direction: column;
     top: 50px;
+    left: 20%;
+  }
+
+  .socials {
+    width: 400px;
+    top: 20px;
+    left: 40%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .textFields {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+
+  .contacts {
+    flex: 50%;
+    width: 300px;
+    flex-direction: column;
+    top: 50px;
     left: 40%;
   }
 
@@ -199,5 +238,19 @@ body {
     width: 400px;
     top: 20px;
     left: 40%;
+  }
+
+  .contactIcons {
+    margin: 0 0 70px 0;
+  }
+
+  .contactsText {
+    padding-left: 40px;
+    font-size: 12pt;
+  }
+
+  .socialIcons {
+    margin-right: 50px;
+    cursor: pointer;
   }
 }
