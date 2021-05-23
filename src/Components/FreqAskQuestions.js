@@ -50,7 +50,7 @@ const FreqAskQuestions = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                            I am located in the New York Metropolitan area. Though more than willing to shoot anywhere, but will have to <br/>&emsp;&emsp;&emsp;discuss travel details with the client.
+                            Currently located in the New York Metropolitan area. Willing to shoot anywhere, but will discuss travel details with the client.
                     </Typography>
                     <img></img>
                     </AccordionDetails>
@@ -64,7 +64,7 @@ const FreqAskQuestions = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                     <Typography>
-                            Depends entirely on the type of shoot. Please go to the Contact page and send me a message, we can then <br/>&emsp;&emsp;&emsp;discuss rates and find what works for both of us.
+                            Rates are entirely dependent on the shoot. Please go to the Contact page and send me a message, we can then discuss rates and find what works for both of us.
                     </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -105,7 +105,7 @@ const FreqAskQuestions = () => {
                     <AccordionDetails>
                     <Typography>
                         It all depends on the type of shoot, how long it was, how many photos were taken, any editing requests, etc... 
-                        <br/>&emsp;&emsp;&emsp;For example, on a 2-hour shoot, 100-150 photos taken, you will receive your photos within 2-3 days. 
+                        <br/>&emsp;&emsp;&emsp;For example, on a 2-hour shoot, 50-70 photos taken, you will receive your photos within 1-2 days. 
                         <br/>&emsp;&emsp;&emsp;A clear estimate will be made right after the shoot.
                     </Typography>
                     </AccordionDetails>

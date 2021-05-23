@@ -22,7 +22,7 @@ const MenuBar = () => {
 
     return (
             <header className="menu">
-                <h1 className="title"><NavLink to="/">MasaFuna <br />Photos </NavLink></h1>
+                <h1 className="title"><NavLink to="/">Funakoshi <br />Photography </NavLink></h1>
 
                 <ul className="menu-items">
                     <li>
