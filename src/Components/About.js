@@ -9,7 +9,7 @@ const About = () => {
     })
 
     return (
-        <Container maxWidth="lg" className="aboutPage">
+        <Container maxWidth="md" className="aboutPage">
             <ScrollToTop />
             <h1 className="about-Title">About Me</h1>
             

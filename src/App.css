@@ -6,7 +6,7 @@ body {
 }
 
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 /* overall page*/
 
@@ -34,7 +34,7 @@ img {
 /* top menu bar*/
 
 .menu {
-  max-width: 100%;
+  min-width: 100%;
   height: 240px;
   /* transition: 0.4s; */
 
@@ -48,8 +48,7 @@ img {
 }
 
 h1 {
-  font-weight: bold;
-  font-family: "Pinyon Script", cursive;
+  font-family: "Playfair Display", serif;
 
   padding-left: 40px;
   padding-top: 20px;
@@ -57,9 +56,9 @@ h1 {
 }
 
 .title {
-  padding-right: 970px;
+  padding-right: 690px;
   color: #808080;
-  font-size: 4.5em;
+  font-size: 4em;
   line-height: 70px;
 }
 
@@ -68,6 +67,7 @@ h1 {
   font-family: "Times New Roman", Times, serif;
   margin-right: 90px;
   font-size: 16pt;
+  color: #808080;
 }
 
 a:link,
@@ -187,19 +187,19 @@ a:hover {
 .quote {
   text-align: center;
   color: #bbb;
-  font-size: 45pt;
-  font-family: "Times New Roman", Times, serif;
+  font-size: 40pt;
+  font-family: "Playfair Display", Times, serif;
   z-index: 3;
   text-shadow: -1px 0px 0 rgb(255, 255, 255), 0px -1px 0 rgb(255, 255, 255),
     -1px 1px 0 rgb(255, 255, 255), 1px 0px 0 rgb(255, 255, 255);
 
   position: relative;
   bottom: 900px;
-  right: 450px;
+  right: 370px;
 }
 
 .quote > span {
-  font-size: 75pt;
+  font-size: 55pt;
   font-style: italic;
   color: #d1949a;
 }
@@ -279,7 +279,7 @@ a:hover {
   .menu {
     height: 180px;
     min-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 
     display: flex;
     justify-content: space-between;
@@ -291,9 +291,9 @@ a:hover {
   }
 
   .title {
-    padding-right: 490px;
+    padding-right: 390px;
     color: #808080;
-    font-size: 4.5em;
+    font-size: 4em;
     line-height: 70px;
   }
 
@@ -329,16 +329,16 @@ a:hover {
   .quote {
     text-align: center;
     color: #bbb;
-    font-size: 35pt;
-    font-family: "Times New Roman", Times, serif;
+    font-size: 33pt;
+    font-family: "Playfair Display", Times, serif;
 
     position: relative;
-    bottom: 700px;
-    right: 350px;
+    bottom: 750px;
+    right: 300px;
   }
 
   .quote > span {
-    font-size: 55pt;
+    font-size: 50pt;
     font-style: italic;
     color: #d1949a;
   }
@@ -533,13 +533,13 @@ a:hover {
 /*/////////////////////////////////////////////// For mobile phones /////////////////////////////////////////////////*/
 @media only Screen and (max-device-width: 480px) {
   .App {
-    max-width: 480px;
+    min-width: 350px;
   }
 
   /* top menu bar*/
   .menu {
     max-width: 100%;
-    height: 180px;
+    height: 150px;
     margin-bottom: 20px;
 
     display: flex;
@@ -560,9 +560,10 @@ a:hover {
 
   .title {
     color: #808080;
-    font-size: 3em;
-    padding-right: 10%;
-    line-height: 60px;
+    font-size: 2em;
+    padding-right: 15%;
+    line-height: 40px;
+    padding-bottom: 40px;
   }
 
   /*SlideShow*/
