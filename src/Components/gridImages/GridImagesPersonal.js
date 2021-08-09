@@ -4,6 +4,10 @@ import Grid from '@material-ui/core/Grid';
 import useFirestore from '../../hooks/useFirestore'
 import FadeInSections from '../FadeInSections';
 import Modal from '@material-ui/core/Modal';
+import {
+    NavLink,
+} from "react-router-dom";
+
 
 const GridImagesPersonal = ({openImage, handleOpen, handleClose}) => {
     
@@ -83,7 +87,9 @@ const GridImagesPersonal = ({openImage, handleOpen, handleClose}) => {
 
     return (
         <div className="thirdSegment">
-            <h1 className="sectionTitles">Personal Projects</h1>
+            <h1 className="sectionTitles">
+                <NavLink to="/Nature"> Personal Projects </NavLink> 
+            </h1>
 
             <div className={classes.root}>
             <FadeInSections>
