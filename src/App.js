@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import './App.css';
 import MenuBar from "./Components/MenuBar"
 import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
@@ -20,6 +20,10 @@ import Portraits from "./Components/galleries/Portraits";
 
 
 const App = () => {
+
+  useEffect(() => {
+    document.title='Funakoshi Photography'
+  }, [])
 
   //JSX
   return (

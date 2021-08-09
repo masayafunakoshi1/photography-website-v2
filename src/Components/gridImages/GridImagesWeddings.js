@@ -4,6 +4,9 @@ import Grid from '@material-ui/core/Grid';
 import useFirestore from '../../hooks/useFirestore'
 import FadeInSections from '../FadeInSections'
 import Modal from '@material-ui/core/Modal';
+import {
+    NavLink,
+} from "react-router-dom";
 
 const GridImagesWeddings = ({openImage, handleOpen, handleClose}) => {
     const { docs } = useFirestore('gridImagesWeddings')
@@ -80,7 +83,9 @@ const GridImagesWeddings = ({openImage, handleOpen, handleClose}) => {
     return (
         <div className="firstSegment">
                 
-            <h1 className="sectionTitles">Weddings</h1>
+            <h1 className="sectionTitles">
+                <NavLink to="/Weddings"> Weddings </NavLink>
+            </h1>
 
                 <div className={classes.root}>
                 <FadeInSections>
