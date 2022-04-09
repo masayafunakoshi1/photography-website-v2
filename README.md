@@ -1,9 +1,6 @@
-A beginner photography website using JavaScript and React.js. Using CSS and Material UI for the majority of the styling and visuals. Connected to the Google Firebase/Firestore API to hold my images as well as any inputted information within it's collections. Website is also responsive to browser/device max-width, mainly using CSS styling to accomplish that.
+Creating myself a beginner photography website using JavaScript alongside React.js. Using CSS and Material UI for the majority of the styling and visuals. Connected to the Google Firebase/Firestore API to hold my images as well as any inputted information within it's collections.
 
-NETLIFY LINK: https://dreamy-cori-899bee.netlify.app/
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////ReactBoilerplate/////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

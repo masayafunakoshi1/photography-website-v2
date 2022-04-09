@@ -1,40 +1,29 @@
-import React, {useState} from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import {GridList, GridListTile, Modal} from '@material-ui/core'
+import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
+import ScrollToTop from "../ScrollToTop";
+import "../styles/GalleryStyles.css";
+import GridListComp from "./GridListComp";
+import imgData from "./images/NatureImgs";
 
-import ScrollToTop from '../ScrollToTop'
-import imgData from './images/NatureImgs'
-import FadeInSections from '../FadeInSections'
-import '../styles/GalleryStyles.css'
-
-import GridListComp from './GridListComp'
-
-
- const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        backgroundColor: theme.palette.background.paper,
-        maxWidth: '100vw',
-    },
-
- }));
-
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    flexWrap: "wrap",
+    backgroundColor: theme.palette.background.paper,
+    maxWidth: "100vw",
+  },
+}));
 
 const Nature = () => {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-      <div className={classes.root}>
+  return (
+    <div className={classes.root}>
+      <ScrollToTop />
 
-        <ScrollToTop />
-
-        <GridListComp imgData={imgData} />
-        
+      <GridListComp imgData={imgData} />
     </div>
-    )
-}
+  );
+};
 
-export default Nature
-
-
+export default Nature;
