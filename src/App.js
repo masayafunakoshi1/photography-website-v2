@@ -19,6 +19,7 @@ const App = () => {
     document.title = "Funakoshi Photography";
   }, []);
 
+
   //JSX
   return (
     <Router>
@@ -42,6 +43,7 @@ const App = () => {
         </Switch>
       </div>
     </Router>
+
   );
 };
 

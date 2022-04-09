@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Weddings = () => {
   const classes = useStyles();
-
   return (
     <div className={classes.root}>
       <ScrollToTop />
