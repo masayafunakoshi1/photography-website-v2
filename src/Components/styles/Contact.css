@@ -22,15 +22,10 @@ body {
 }
 
 .contact-Title {
-  font-size: 50pt;
+  font-size: 34pt;
   /* text-decoration: underline 4px solid rgb(255, 227, 232); */
   text-align: center;
-
-  background-image: linear-gradient(to top, #f8dfdf, #f77588);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+  color: #000000;
 }
 
 .contact-Subtext {
@@ -184,15 +179,11 @@ body {
 
 @media only screen and (max-width: 650px) {
   .contact-Title {
-    font-size: 45pt;
+    font-size: 35pt;
     /* text-decoration: underline 4px solid rgb(255, 227, 232); */
     text-align: center;
 
-    background-image: linear-gradient(to top, #f8dfdf, #f77588);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+    color: #000000;
   }
 
   .contact-Subtext {

@@ -21,7 +21,7 @@ img {
   flex-wrap: wrap;
 
   height: auto;
-  max-width: 100%;
+  min-width: 100%;
 }
 
 .menuApp {
@@ -35,7 +35,7 @@ img {
   max-width: 100%;
   height: 240px;
   /* transition: 0.4s; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
   display: flex;
   align-items: center;
@@ -332,37 +332,25 @@ a:hover {
 @media only Screen and (max-width: 1315px) {
   /* top menu bar*/
   .menu {
-    max-width: 100%;
     height: 180px;
     margin-bottom: 20px;
   }
 
   .title {
     padding-right: 50px;
-    color: #808080;
-    font-size: 4.5em;
-    line-height: 70px;
   }
 
   .menu-items > li {
-    font-family: "Times New Roman", Times, serif;
-    display: flex;
-    flex-direction: column;
     font-size: 15pt;
   }
   /*SlideShow*/
   #myimg {
-    max-width: 700px;
-    height: auto;
-    flex: 100%;
-    z-index: 1;
-    border-radius: 5%;
+    max-width: 45em;
   }
 
   .rightArrow {
     left: 940px;
     top: -250px;
-    font-size: 30pt;
   }
 
   .leftArrow {
@@ -373,78 +361,35 @@ a:hover {
   }
 
   .quote {
-    text-align: center;
-    color: #bbb;
     font-size: 20pt;
-    font-family: "Times New Roman", Times, serif;
-    z-index: 3;
-
     bottom: 470px;
-    right: 350px;
+    right: 20%;
   }
 
   .quoteBig{
     font-size: 40pt;
-    font-style: italic;
-    color: #d1949a;
   }
 
   /* Grid Images */
   .sectionTitles {
-    background-color: pink;
-    background-image: linear-gradient(to top, #f8dfdf, #f77588);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-
     font-size: 4em;
-    text-align: center;
   }
 
   /* Page Segmentation */
   .slideshowSegment {
     height: 600px;
-    width: 100vw;
+    width: 98%;
   }
 
-  .firstSegment {
-    width: 100%;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgba(255, 255, 255) 100%
-    );
-  }
 
   .secondSegment {
     margin-top: 150px;
-    width: 100%;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgb(255, 255, 255) 100%
-    );
+    width: 98%;
   }
 
   .thirdSegment {
     margin-top: 150px;
-    width: 100%;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgba(255, 255, 255) 100%
-    );
+    width: 98%;
   }
 }
 
@@ -452,41 +397,30 @@ a:hover {
 @media only Screen and (max-device-width: 480px) {
   .App {
     min-width: 350px;
+    max-width: 480px;
   }
 
   /* top menu bar*/
   .menu {
-    max-width: 100%;
     height: 150px;
-    margin-bottom: 20px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
-    background: linear-gradient(to top, #ffffff, #f7b8c1);
   }
 
   .menu-items > li {
-    font-family: "Times New Roman", Times, serif;
     display: flex;
     flex-direction: column;
     font-size: 10pt;
   }
 
   .title {
-    color: #808080;
     font-size: 2em;
-    padding-right: 15%;
+    padding-right: 2%;
     line-height: 40px;
     padding-bottom: 40px;
   }
 
   /*SlideShow*/
   #myimg {
-    max-width: 320px;
+    max-width: 90%;
     height: auto;
     flex: 100%;
     z-index: 1;
@@ -494,116 +428,47 @@ a:hover {
     margin-left: 0px;
   }
 
-  .rightArrow {
-    text-align: center;
-    position: relative;
-    left: 360px;
-    top: -90px;
-    opacity: 1;
-  }
-
-  .leftArrow {
-    text-align: center;
-    position: relative;
-    left: -350px;
-    bottom: 93px;
-    opacity: 1;
-  }
-
-  .rightArrow > span {
-    color: white;
-    font-size: 20px;
-  }
-
-  .leftArrow > span {
-    color: white;
-    font-size: 20px;
-  }
+  
 
   .quote {
-    text-align: center;
-    color: #bbb;
-    font-size: 20pt;
-    font-family: "Times New Roman", Times, serif;
-    z-index: 3;
-    left: 40px;
-    bottom: 900px;
+    display: none;
   }
 
-  .quoteBig {
-    font-size: 40pt;
-    font-style: italic;
-    color: #d1949a;
+  .quoteBackground{
+    display: none;
   }
 
   /* Grid Images */
   .sectionTitles {
     max-height: 200px;
-    max-width: 800px;
+    font-size: 2.6em;
     display: flex;
-    background-color: pink;
-    background-image: linear-gradient(to top, #f8dfdf, #f77588);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-
-    font-size: 4em;
-    text-align: center;
   }
 
   /* Page Segmentation */
   .slideshowSegment {
     height: 400px;
-    width: 100vw;
+    max-width: 90%;
   }
 
   .firstSegment {
-    width: 100%;
+    max-width: 90%;
     flex-direction: column;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgba(255, 255, 255) 100%
-    );
   }
 
   .secondSegment {
     margin-top: 150px;
-    width: 100%;
+    max-width: 90%;
     flex-direction: column;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgb(255, 255, 255) 100%
-    );
   }
 
   .thirdSegment {
     margin-top: 150px;
-    width: 100%;
+    max-width: 90%;
     flex-direction: column;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgba(255, 255, 255) 100%
-    );
   }
 
   .arrowHolderDiv {
-    position: fixed;
-    left: 35%;
-    top: 85%;
-    z-index: 99;
+    display: none;
   }
 }

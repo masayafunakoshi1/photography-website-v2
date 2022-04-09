@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
       width: "20px",
       height: "30px",
     },
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
 }));
 
