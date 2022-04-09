@@ -15,7 +15,7 @@ const MenuBar = () => {
     setAnchorEl(null);
   };
 
-  return (
+ return (
     <header className="menu">
       <h1 className="title">
         <NavLink to="/">

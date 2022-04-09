@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import GridImagesEvents from "./gridImages/GridImagesEvents";
 import GridImagesPersonal from "./gridImages/GridImagesPersonal";
@@ -8,7 +9,6 @@ const Home = () => {
   const [openImage, setOpenImage] = useState(0);
 
   //functions
-
   const handleOpen = (x) => {
     setOpenImage(x);
   };

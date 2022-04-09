@@ -53,6 +53,7 @@ const Contact = () => {
           >
             Message was unable to send :(
           </Alert>
+
         </div>
         <h1 className="contact-Title">Contact Us</h1>
         <h3 className="contact-Subtext">
