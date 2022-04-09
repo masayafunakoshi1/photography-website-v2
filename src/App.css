@@ -1,9 +1,4 @@
-html,
-body {
-  width: 100%;
-  margin: 0px 0px 0px 0px;
-  padding: 0px;
-}
+
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
@@ -23,7 +18,7 @@ img {
   display: flex;
   flex-wrap: wrap;
 
-  width: auto;
+  width: 100%;
 }
 
 .menuApp {
@@ -42,9 +37,7 @@ img {
   align-items: center;
   z-index: 1000;
 
-  background: #f7b8c1; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
-  background: linear-gradient(to top, #ffffff, #f7b8c1);
+  background: #ffffff; /* fallback for old browsers */
 }
 
 h1 {
@@ -57,7 +50,7 @@ h1 {
 
 .title {
   padding-right: 690px;
-  color: #808080;
+  color: #000000;
   font-size: 4em;
   line-height: 70px;
 }
@@ -66,13 +59,14 @@ h1 {
   display: inline;
   font-family: "Times New Roman", Times, serif;
   margin-right: 90px;
-  font-size: 16pt;
-  color: #808080;
+  font-size: 18pt;
+  color: #181818;
+    overflow-x: hidden;
 }
 
 a:link,
 a:visited {
-  color: #808080;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -85,48 +79,24 @@ a:hover {
 
 .slideshowSegment {
   height: 1100px;
-  width: 100vw;
+  width: 98%;
 }
 
 .firstSegment {
-  width: 100vw;
+  width: 98%;
   padding-left: 32px;
-
-  background: #f7b8c1; /* fallback for old browsers */
-  background: linear-gradient(
-    to bottom,
-    rgb(255, 255, 255) 0%,
-    rgb(253, 211, 217) 80%,
-    rgba(255, 255, 255) 100%
-  );
 }
 
 .secondSegment {
   margin-top: 150px;
-  width: 100vw;
+  width: 98%;
   padding-left: 32px;
-
-  background: #f7b8c1; /* fallback for old browsers */
-  background: linear-gradient(
-    to bottom,
-    rgb(255, 255, 255) 0%,
-    rgb(253, 211, 217) 80%,
-    rgb(255, 255, 255) 100%
-  );
 }
 
 .thirdSegment {
   margin-top: 150px;
-  width: 100vw;
+  width: 98%;
   padding-left: 32px;
-
-  background: #f7b8c1; /* fallback for old browsers */
-  background: linear-gradient(
-    to bottom,
-    rgb(255, 255, 255) 0%,
-    rgb(253, 211, 217) 80%,
-    rgba(255, 255, 255) 100%
-  );
 }
 
 /*Slideshow*/
@@ -186,20 +156,22 @@ a:hover {
 
 .quote {
   text-align: center;
-  color: #bbb;
+  color: rgb(0, 0, 0);
   font-size: 40pt;
   font-family: "Playfair Display", Times, serif;
   z-index: 3;
-  text-shadow: -1px 0px 0 rgb(255, 255, 255), 0px -1px 0 rgb(255, 255, 255),
-    -1px 1px 0 rgb(255, 255, 255), 1px 0px 0 rgb(255, 255, 255);
 
   position: relative;
   bottom: 900px;
   right: 370px;
 }
 
-.quote > span {
-  font-size: 55pt;
+.quoteOutline{
+  background-color: #ffffff;
+}
+
+.quoteBig{
+  font-size: 46pt;
   font-style: italic;
   color: #d1949a;
 }
@@ -213,8 +185,7 @@ a:hover {
 
 /* Grid Images */
 .sectionTitles {
-  background-color: pink;
-  background-image: linear-gradient(to top, #f8dfdf, #f77588);
+  background-image: linear-gradient(to top, #636363, #000000);
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -278,38 +249,18 @@ a:hover {
   /* top menu bar*/
   .menu {
     height: 180px;
-    min-width: 100%;
     margin-bottom: 80px;
 
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
-    background: linear-gradient(to top, #ffffff, #f7b8c1);
   }
 
   .title {
     padding-right: 390px;
-    color: #808080;
-    font-size: 4em;
-    line-height: 70px;
-  }
-
-  .menu-items > li {
-    font-family: "Times New Roman", Times, serif;
-    margin-right: 90px;
-    font-size: 15pt;
   }
 
   /*SlideShow*/
   #myimg {
     max-width: 1000px;
-    height: auto;
-    flex: 100%;
-    z-index: 1;
-    border-radius: 5%;
     margin-left: 150px;
   }
 
@@ -327,78 +278,38 @@ a:hover {
   }
 
   .quote {
-    text-align: center;
-    color: #bbb;
     font-size: 33pt;
-    font-family: "Playfair Display", Times, serif;
-
-    position: relative;
     bottom: 750px;
-    right: 300px;
+    right: 15%;
   }
 
-  .quote > span {
-    font-size: 50pt;
-    font-style: italic;
-    color: #d1949a;
+  .quoteBig{
+    font-size: 46pt;
   }
 
   /* Grid Images */
   .sectionTitles {
-    background-color: pink;
-    background-image: linear-gradient(to top, #f8dfdf, #f77588);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-
     font-size: 3.5em;
   }
 
   /* Page Segmentation */
   .slideshowSegment {
     height: 800px;
-    width: 100vw;
+    width: 100%;
   }
 
   .firstSegment {
-    width: 100vw;
     right: 20px;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgba(255, 255, 255) 100%
-    );
+    width: 100%;
   }
 
   .secondSegment {
     margin-top: 100px;
     width: 100%;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgb(255, 255, 255) 100%
-    );
   }
 
   .thirdSegment {
-    margin-top: 100px;
     width: 100%;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgba(255, 255, 255) 100%
-    );
   }
 }
 
@@ -406,52 +317,16 @@ a:hover {
 @media only Screen and (max-width: 1315px) {
   /* top menu bar*/
   .menu {
-    max-width: 100%;
-    height: 180px;
     margin-bottom: 20px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
-    background: linear-gradient(to top, #ffffff, #f7b8c1);
   }
 
   .title {
-    padding-right: 50px;
-    color: #808080;
-    font-size: 4.5em;
-    line-height: 70px;
+    padding-right: 40px;
   }
 
-  .menu-items > li {
-    font-family: "Times New Roman", Times, serif;
-    display: flex;
-    flex-direction: column;
-    font-size: 15pt;
-  }
   /*SlideShow*/
   #myimg {
     max-width: 700px;
-    height: auto;
-    flex: 100%;
-    z-index: 1;
-    border-radius: 5%;
-  }
-
-  .rightArrow {
-    left: 940px;
-    top: -250px;
-    font-size: 30pt;
-  }
-
-  .leftArrow {
-    text-align: center;
-    position: relative;
-    bottom: 255px;
-    left: -800px;
   }
 
   .quote {
@@ -465,97 +340,47 @@ a:hover {
     right: 350px;
   }
 
-  .quote > span {
+  .quoteBig {
     font-size: 40pt;
-    font-style: italic;
-    color: #d1949a;
   }
 
   /* Grid Images */
   .sectionTitles {
-    background-color: pink;
-    background-image: linear-gradient(to top, #f8dfdf, #f77588);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-
-    font-size: 4em;
-    text-align: center;
+    font-size: 3em;
   }
 
   /* Page Segmentation */
   .slideshowSegment {
     height: 600px;
-    width: 100vw;
   }
 
-  .firstSegment {
-    width: 100%;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgba(255, 255, 255) 100%
-    );
-  }
 
   .secondSegment {
     margin-top: 150px;
-    width: 100%;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgb(255, 255, 255) 100%
-    );
   }
 
   .thirdSegment {
     margin-top: 150px;
-    width: 100%;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgba(255, 255, 255) 100%
-    );
   }
 }
 
+
+@media only Screen and (max-width: 768px) {
+  /* need to add more styles */
+}
 /*/////////////////////////////////////////////// For mobile phones /////////////////////////////////////////////////*/
 @media only Screen and (max-device-width: 480px) {
   .App {
     min-width: 350px;
+    max-width: 480px;
   }
 
-  /* top menu bar*/
-  .menu {
-    max-width: 100%;
-    height: 150px;
-    margin-bottom: 20px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #ffffff, #f7b8c1);
-    background: linear-gradient(to top, #ffffff, #f7b8c1);
-  }
 
   .menu-items > li {
     font-family: "Times New Roman", Times, serif;
     display: flex;
     flex-direction: column;
-    font-size: 10pt;
+    font-size: 15pt;
   }
 
   .title {
@@ -603,36 +428,13 @@ a:hover {
   }
 
   .quote {
-    text-align: center;
-    color: #bbb;
-    font-size: 20pt;
-    font-family: "Times New Roman", Times, serif;
-    z-index: 3;
-    left: 40px;
-    bottom: 900px;
-  }
-
-  .quote > span {
-    font-size: 40pt;
-    font-style: italic;
-    color: #d1949a;
+    display: none;
   }
 
   /* Grid Images */
   .sectionTitles {
     max-height: 200px;
     max-width: 800px;
-    display: flex;
-    background-color: pink;
-    background-image: linear-gradient(to top, #f8dfdf, #f77588);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-
-    font-size: 4em;
-    text-align: center;
   }
 
   /* Page Segmentation */
@@ -644,48 +446,21 @@ a:hover {
   .firstSegment {
     width: 100%;
     flex-direction: column;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgba(255, 255, 255) 100%
-    );
   }
 
   .secondSegment {
     margin-top: 150px;
     width: 100%;
     flex-direction: column;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgb(255, 255, 255) 100%
-    );
   }
 
   .thirdSegment {
     margin-top: 150px;
     width: 100%;
     flex-direction: column;
-
-    background: #f7b8c1; /* fallback for old browsers */
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 189, 198) 80%,
-      rgba(255, 255, 255) 100%
-    );
   }
 
   .arrowHolderDiv {
-    position: fixed;
-    left: 35%;
-    top: 85%;
-    z-index: 99;
+    display: none;
   }
 }

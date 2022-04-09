@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
       width: "20px",
       height: "30px",
     },
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
 }));
 
@@ -116,8 +119,9 @@ const Slideshow = () => {
       </Container>
 
       <Container className="quote">
-        <span>Photography</span> is a medium <br /> which allows you to
-        experience life <br /> from another's perspective...
+        <span className="quoteOutline"><span className="quoteBig">Photography</span> is a medium</span> <br /> 
+        <span className="quoteOutline">which allows you to experience life</span> <br /> 
+        <span className="quoteOutline">from another's perspective...</span>
       </Container>
     </div>
   );

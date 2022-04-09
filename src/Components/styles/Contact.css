@@ -22,11 +22,11 @@ body {
 }
 
 .contact-Title {
-  font-size: 50pt;
+  font-size: 32pt;
   /* text-decoration: underline 4px solid rgb(255, 227, 232); */
   text-align: center;
 
-  background-image: linear-gradient(to top, #f8dfdf, #f77588);
+  background-image: linear-gradient(to top, rgb(65, 65, 65), #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
@@ -184,11 +184,11 @@ body {
 
 @media only screen and (max-width: 650px) {
   .contact-Title {
-    font-size: 45pt;
+    font-size: 32pt;
     /* text-decoration: underline 4px solid rgb(255, 227, 232); */
     text-align: center;
 
-    background-image: linear-gradient(to top, #f8dfdf, #f77588);
+    background-image: linear-gradient(to top, rgb(65, 65, 65), #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
